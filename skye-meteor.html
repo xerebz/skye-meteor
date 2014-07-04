@@ -1,13 +1,25 @@
 <head>
-  <title>skye-meteor</title>
+  <title>Skye: Endless Realm - Meteor.js Demo</title>
 </head>
 
 <body>
-  {{> hello}}
+  {{> userInfoBar}}
+  {{> avatar}}
+  {{> buyMenu}}
 </body>
 
-<template name="hello">
-  <h1>Hello World!</h1>
-  {{greeting}}
-  <input type="button" value="Click" />
+<template name="userInfoBar">
+  <span>Mr. {{foo.name}}</span>
+  <span>${{foo.money}}</span>
+    <span>id: {{foo._id}}</span>
+</template>
+
+<template name="avatar">
+</template>
+
+<template name="buyMenu">
+  <button>Thing</button>
+</template>
+
+<template name="itemMenu">
 </template>
