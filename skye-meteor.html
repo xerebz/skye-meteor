@@ -1,25 +1,59 @@
+<!-- Skye: Endless Realm - Heart Level Up! - 2014 -->
+
 <head>
   <title>Skye: Endless Realm - Meteor.js Demo</title>
 </head>
 
+<!-- This is the high-level layout of the application -->
+
 <body>
-  {{> userInfoBar}}
-  {{> avatar}}
-  {{> buyMenu}}
+
+  {{> navigationBar}}
+
+  {{> content}}
+
+  {{> footer}}
+
 </body>
 
-<template name="userInfoBar">
-  <span>Mr. {{foo.name}}</span>
-  <span>${{foo.money}}</span>
-    <span>id: {{foo._id}}</span>
+<!-- Navigation bar that goes across the top -->
+
+<template name="navigationBar">
+  <div class="navbar navbar-default" role="navigation">
+      <div class="navbar-header">
+          <a class="navbar-brand" href="{{pathFor 'home'}}">Skye: Endless Realm</a>
+      </div>
+      <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+              <li class="{{ activeIfTemplateIs 'avatar' }}"><a href="{{pathFor 'avatar'}}">Avatar</a></li>
+          </ul>
+          <ul class="nav navbar-nav">
+              <li class="{{ activeIfTemplateIs 'market' }}"><a href="{{pathFor 'market'}}">Marketplace</a></li>
+          </ul>
+          <ul class="nav navbar-nav">
+              <li><a href="http://bubblegum.endlessrealm.com">Forum</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+              {{> loginButtons}}
+          </ul>
+      </div>
+  </div>
 </template>
 
-<template name="avatar">
+<!-- App content goes here, see router.js for application routes -->
+
+<template name="content">
+  <div id="container">
+    {{renderRouter}}
+  </div>
 </template>
 
-<template name="buyMenu">
-  <button>Thing</button>
-</template>
+<!-- The footer at the bottom of the page -->
 
-<template name="itemMenu">
+<template name="footer">
+  <div class="footer navbar-fixed-bottom">
+    <div class="container text-center">
+      <p class="text-muted credit">Heart! Level! Up! - 2014</p>
+    </div>
+  </div>
 </template>

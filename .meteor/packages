@@ -8,3 +8,8 @@ autopublish
 insecure
 accounts-password
 coffeescript
+accounts-google
+accounts-ui-bootstrap-3
+iron-router
+less
+bootstrap3-less
