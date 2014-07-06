@@ -2,9 +2,17 @@
 
 <template name="avatar">
 
-  {{> avatarDisplay}}
+  {{#if userHasCreatedAvatar}}
 
-  {{> itemMenu}}
+    {{> avatarDisplay}}
+
+    {{> itemMenu}}
+
+  {{else}}
+
+    {{> createAvatarMenu}}
+
+  {{/if}}
 
 </template>
 
@@ -14,4 +22,10 @@
 
 <template name="itemMenu">
   <img src="thumbnails/MaleA_Head.png">
+</template>
+
+<template name="createAvatarMenu">
+  
+  <img src="{{sause}}">
+  <button>Make an Avatar!</button>
 </template>
