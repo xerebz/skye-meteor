@@ -21,4 +21,13 @@ var mustBeSignedIn = function(pause) {
   }
 };
 
+//once logged in, go to the home page
+var goToDashboard = function(pause) {
+  if (Meteor.user()) {
+    Router.go('home');
+    pause();
+  }
+};
+
+Router.onBeforeAction(goToDashboard, {only: ['login']});
 Router.onBeforeAction(mustBeSignedIn, {except: ['login']});
