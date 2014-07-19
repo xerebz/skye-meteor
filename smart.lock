@@ -4,7 +4,8 @@
     "basePackages": {
       "accounts-ui-bootstrap-3": {},
       "iron-router": {},
-      "bootstrap3-less": {}
+      "bootstrap3-less": {},
+      "fast-render": {}
     },
     "packages": {
       "accounts-ui-bootstrap-3": {
@@ -18,9 +19,14 @@
         "commit": "d1ffb3f06ea4c112132b030f2eb1a70b81675ecb"
       },
       "bootstrap3-less": {
-        "git": "https://github.com/eprochasson/bootstrap3-less",
-        "tag": "v0.1.9",
-        "commit": "5c812c4d7ce72917a065f0424c3cf54e5ff2d16a"
+        "git": "https://github.com/simison/bootstrap3-less",
+        "tag": "v0.2.1",
+        "commit": "dc94a51ed00d7de6d6f2b6d65107a876d849ad61"
+      },
+      "fast-render": {
+        "git": "https://github.com/arunoda/meteor-fast-render.git",
+        "tag": "v0.2.8",
+        "commit": "149984b1aff3a5642a270aff9bd9006872c8302e"
       },
       "blaze-layout": {
         "git": "https://github.com/EventedMind/blaze-layout.git",

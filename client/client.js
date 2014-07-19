@@ -1,6 +1,3 @@
-Session.setDefault("skintone", "A");
-Session.setDefault("sex", "Male");
-
 Template.avatar.helpers({
   userAvatar: function() {
     return Avatars.find({user_id: Meteor.userId()});
@@ -9,7 +6,7 @@ Template.avatar.helpers({
 
 Template.createAvatarMenu.helpers({
   sause: function() {
-    return "images/"+Session.get("sex")+Session.get("skintone")+"_Head.png";
+    return "images/MaleA_Head.png";
   }
 });
 
@@ -19,8 +16,10 @@ Template.avatar.events({
   }
 });
 
-
-
-Template.avatarDisplay.canvas = function() {
-  return "hey";
-};
+Template.navItems.helpers({
+  activeIfTemplateIs: function (template) {
+    var currentRoute = Router.current();
+    return currentRoute &&
+      template === currentRoute.lookupTemplate() ? 'active' : '';
+  }
+});

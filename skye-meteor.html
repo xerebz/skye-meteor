@@ -1,20 +1,17 @@
 <!-- Skye: Endless Realm - Heart Level Up! - 2014 -->
 
-<head>
-  <title>Skye: Endless Realm - Meteor.js Demo</title>
-</head>
-
 <!-- This is the high-level layout of the application -->
+<template name="layout">
+  <head>
+    <title>Skye: Endless Realm - Meteor.js Demo</title>
+  </head>
 
-<body>
-
-  {{> navigationBar}}
-
-  {{> content}}
-
-  {{> footer}}
-
-</body>
+  <body>
+    {{> navigationBar}}
+    {{> content}}
+    {{> footer}}
+  </body>
+</template>
 
 <!-- Navigation bar that goes across the top -->
 
@@ -24,15 +21,7 @@
           <a class="navbar-brand" href="{{pathFor 'home'}}">Skye: Endless Realm</a>
       </div>
       <div class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-              <li class="{{ activeIfTemplateIs 'avatar' }}"><a href="{{pathFor 'avatar'}}">Avatar</a></li>
-          </ul>
-          <ul class="nav navbar-nav">
-              <li class="{{ activeIfTemplateIs 'market' }}"><a href="{{pathFor 'market'}}">Marketplace</a></li>
-          </ul>
-          <ul class="nav navbar-nav">
-              <li><a href="http://bubblegum.endlessrealm.com">Forum</a></li>
-          </ul>
+          {{> navItems}}
           <ul class="nav navbar-nav navbar-right">
               {{> loginButtons}}
           </ul>
@@ -40,11 +29,23 @@
   </div>
 </template>
 
+<template name="navItems">
+  <ul class="nav navbar-nav">
+      <li class="{{ activeIfTemplateIs 'avatar' }}"><a href="{{pathFor 'avatar'}}">Avatar</a></li>
+  </ul>
+  <ul class="nav navbar-nav">
+      <li class="{{ activeIfTemplateIs 'market' }}"><a href="{{pathFor 'market'}}">Marketplace</a></li>
+  </ul>
+  <ul class="nav navbar-nav">
+      <li><a href="http://bubblegum.endlessrealm.com">Forum</a></li>
+  </ul>
+</template>
+
 <!-- App content goes here, see router.js for application routes -->
 
 <template name="content">
   <div id="container">
-    {{renderRouter}}
+    {{> yield}}
   </div>
 </template>
 
@@ -57,3 +58,4 @@
     </div>
   </div>
 </template>
+
