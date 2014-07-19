@@ -1,5 +1,5 @@
 Accounts.onCreateUser (function(options, user) {
-  user.money = 100
+  user.money = 100;
   if (options.profile)
     user.profile = options.profile;
   return user;

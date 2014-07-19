@@ -6,7 +6,14 @@ Meteor.methods({
     Avatars.insert({
       'user_id': Meteor.userId(),
       'sex': sex,
-      'skintone': skintone
+	    'skintone': skintone
+    });
+  },
+
+  destroyAvatar: function() {
+    // if no avatar? some validation here plox
+    Avatars.remove({
+      'user_id': Meteor.userId()
     });
   }
 

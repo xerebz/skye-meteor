@@ -1,6 +1,6 @@
 Template.avatar.helpers({
   userAvatar: function() {
-    return Avatars.find({user_id: Meteor.userId()});
+    return Avatars.find({user_id: Meteor.userId()}).count();
   }
 });
 
@@ -11,9 +11,12 @@ Template.createAvatarMenu.helpers({
 });
 
 Template.avatar.events({
-  'click button': function() {
+  'click button#create': function() {
     Meteor.call( 'createAvatar', Session.get('sex'), Session.get('skintone') );
-  }
+  },
+  'click button#destroy': function() {
+    Meteor.call( 'destroyAvatar' );
+  }, 
 });
 
 Template.navItems.helpers({
