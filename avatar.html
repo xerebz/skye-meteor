@@ -1,19 +1,18 @@
 <!-- Avatar fitting room template -->
 
 <template name="avatar">
-	{{> avatarDisplay}}
-
   {{#if userAvatar}}
+    {{> avatarDisplay}}
 	  {{> itemMenu}}
 	  {{> destroyer}}
 	{{else}}
-	  Que pena
+	  BEGIN!
 	  {{> createAvatarMenu}}
 	{{/if}}
 </template>
 
 <template name="avatarDisplay">
-  <canvas id="activeEquipment" height="680" width="625"></canvas>
+  <canvas id="avatar-canvas" height="680" width="625"></canvas>
 </template>
 
 <template name="itemMenu">

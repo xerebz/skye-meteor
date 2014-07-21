@@ -4,23 +4,25 @@ Meteor.startup(function() {
   var equippables_fixtures = [
 	  {	"name": "Periwinkle Skye Citizen Uniform Blouse",
 	  	"gender": "female",
+	  	"itempack": "starter",
 	  	"layers": [
 	  	  {
-	  	  	"filename": "SkyeERCitizen-PeriwinkleNWhite-Blouse.png"
+	  	  	"filename": "SkyeERCitizen-PeriwinkleNWhite-Blouse.png",
 	  	  	"z-index": 100
 	  	  }
 	  	]
 	  },
     { "name": "Navy Skye Citizen Uniform Dress Shirt",
     	"gender": "male",
+    	"itempack": "starter",
     	"layers": [
 	  	  {
-	  	  	"filename": "SkyeERCitizenUniform-Navy-DressShirt.png"
+	  	  	"filename": "SkyeERCitizenUniform-Navy-DressShirt.png",
 	  	  	"z-index": 50
 	  	  }
 	  	]
 	  },
-	  { "name": "Navy Skye Citizen Uniform Dress Shirt",
+	  { "name": "Male A Body",
     	"gender": "male",
     	"layers": [
 				{
@@ -54,7 +56,7 @@ Meteor.startup(function() {
 				{
 					"filename": "MaleA_Torso.png",
 					"z-index": 58
-				},
+				}
 	  	]
 	  }
 	];

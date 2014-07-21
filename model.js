@@ -10,4 +10,7 @@ Avatars = new Meteor.Collection("avatars");
 Inventories = new Meteor.Collection("inventories");
 
 // Outfits?
-Outfits = new Meteor.Collection("Outfits");
+Outfits = new Meteor.Collection("outfits");
+
+// User currency held in wallets
+Wallets = new Meteor.Collection("wallets");
