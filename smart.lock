@@ -5,7 +5,8 @@
       "accounts-ui-bootstrap-3": {},
       "iron-router": {},
       "bootstrap3-less": {},
-      "fast-render": {}
+      "fast-render": {},
+      "kinetic.js": {}
     },
     "packages": {
       "accounts-ui-bootstrap-3": {
@@ -27,6 +28,11 @@
         "git": "https://github.com/arunoda/meteor-fast-render.git",
         "tag": "v0.2.8",
         "commit": "149984b1aff3a5642a270aff9bd9006872c8302e"
+      },
+      "kinetic.js": {
+        "git": "https://github.com/brentjanderson/meteor-kinetic.git",
+        "tag": "v5.1.0",
+        "commit": "0657c2faa36afadfb4405a8c9f6201710f7984b1"
       },
       "blaze-layout": {
         "git": "https://github.com/EventedMind/blaze-layout.git",

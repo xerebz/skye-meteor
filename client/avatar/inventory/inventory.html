@@ -1,0 +1,7 @@
+<template name="avatarInventory">
+  <div id="avatar-inventory">
+    {{#each inventoryItems}}
+      <img class="item-thumbnail" src="thumbnails/{{item.thumbnail}}" alt="{{item.name}}" /> 
+    {{/each}}
+  </div>
+</template>

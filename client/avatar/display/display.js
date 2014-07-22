@@ -14,16 +14,20 @@ Template.avatarDisplay.helpers({
 	// }
 	equippedItems: function() {
 		return EquippedItems.find({ 'user_id': Meteor.userId() }).fetch();
+	},
+	suzy: function() {
+	  var stage = new Kinetic.Stage();
+	      container: 'grid_map'
+	      width: 385
+	      height: 375
+	  var layer = new Kinetic.Layer()	
+	},
+	pants: function() {
+		console.log("you know dis gon fail");
+		console.log(stage);
 	}
 });
 
 Template.avatarDisplay.rendered = function() {
-
-  // var ctx = $("#avatar-canvas")[0].getContext("2d");
-  // var img = new Image();
-  // img.src = "images/MaleA_Head.png";
-  // img.onload = function() {
-  // 	ctx.drawImage(img,0,0);
-  // }
 
 };

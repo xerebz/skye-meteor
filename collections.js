@@ -1,4 +1,4 @@
-// Database collections are laid out here
+// Database collections (MongoDB models) are laid out here
 
 // All item items
 Items = new Meteor.Collection("items");

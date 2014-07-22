@@ -9,7 +9,6 @@ Router.map (function() {
   this.route('home', {path: '/'}),
   this.route('avatar'),
   this.route('market'),
-
   this.route('login')
 });
 

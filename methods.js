@@ -1,10 +1,10 @@
 Meteor.methods({
 
   //creating a user avatar for the first time
-  createAvatar: function() {
+  createAccount: function() {
 
     //the default body is Male skin A
-  	var default_body = Items.findOne({'name': 'Male A Body'});
+    var default_body = Items.findOne({'name': 'Male A Body'});
 
     //each new players gets a starter pack of items, here we fetch this array
     var starter_pack = Items.find({'itempack': 'starter'}).fetch();
@@ -32,19 +32,19 @@ Meteor.methods({
     Avatars.insert({
       'user_id': Meteor.userId(),
       'sex': 'Male',
-	    'skin': 'A',
-	    'body': default_body,
+      'skin': 'A',
+      'body': default_body,
     });
 
     Wallets.insert({
-    	'user_id': Meteor.userId(),
-    	'gems': 100,
-    	'hearts': 0
+      'user_id': Meteor.userId(),
+      'gems': 100,
+      'hearts': 0
     });
 
   },
 
-  destroyAvatar: function() {
+  destroyAccount: function() {
 
     Avatars.remove({
       'user_id': Meteor.userId()
@@ -62,6 +62,11 @@ Meteor.methods({
       'user_id': Meteor.userId()
     });
 
+  },
+
+  resetAccount: function() {
+    destroyAccount();
+    createAccount();
   },
 
   handleEquip: function(item) {

@@ -3,6 +3,7 @@
     "accounts-ui-bootstrap-3": {},
     "iron-router": {},
     "bootstrap3-less": {},
-    "fast-render": {}
+    "fast-render": {},
+    "kinetic.js": {}
   }
 }

@@ -1,13 +1,11 @@
-Template.itemMenu.helpers({
+Template.avatarInventory.helpers({
 	inventoryItems: function() {
 	  return InventoryItems.find({ "user_id" : Meteor.userId() }).fetch();
 	}
 });
 
-Template.itemMenu.events({
-	'click .item': function() {
-		console.log(this);
-		//Meteor.call('equip', this);
+Template.avatarInventory.events({
+	'click .item-thumbnail': function() {
 		Meteor.call('handleEquip', this.item);
 	}
 });

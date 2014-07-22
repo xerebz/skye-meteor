@@ -1,0 +1,15 @@
+<!-- Avatar fitting room template -->
+
+<template name="avatar">
+
+  <div class="container text-center">
+    <button id="reset-account" type="button" class="btn btn-danger">
+      <span class="glyphicon glyphicon-refresh"></span> Reset Account
+    </button>
+  </div>
+
+  <div id="avatar">
+    {{> avatarDisplay}}
+  	{{> avatarInventory}}
+	</div>
+</template>
