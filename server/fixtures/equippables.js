@@ -5,6 +5,7 @@ Meteor.startup(function() {
 	  {	"name": "Periwinkle Skye Citizen Uniform Blouse",
 	  	"gender": "female",
 	  	"itempack": "starter",
+	  	"thumbnail": "SkyeERCitizen-PeriwinkleNWhite-Blouse.png",
 	  	"layers": [
 	  	  {
 	  	  	"filename": "SkyeERCitizen-PeriwinkleNWhite-Blouse.png",
@@ -15,6 +16,7 @@ Meteor.startup(function() {
     { "name": "Navy Skye Citizen Uniform Dress Shirt",
     	"gender": "male",
     	"itempack": "starter",
+	  	"thumbnail": "SkyeERCitizenUniform-Navy-DressShirt.png",
     	"layers": [
 	  	  {
 	  	  	"filename": "SkyeERCitizenUniform-Navy-DressShirt.png",

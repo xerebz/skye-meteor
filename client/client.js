@@ -12,7 +12,7 @@ Template.createAvatarMenu.helpers({
 
 Template.avatar.events({
   'click button#create': function() {
-    Meteor.call( 'createAvatar', Session.get('sex'), Session.get('skintone') );
+    Meteor.call( 'createAvatar' );
   },
   'click button#destroy': function() {
     Meteor.call( 'destroyAvatar' );

@@ -1,22 +1,30 @@
 <!-- Avatar fitting room template -->
 
 <template name="avatar">
+  <div>
   {{#if userAvatar}}
     {{> avatarDisplay}}
 	  {{> itemMenu}}
-	  {{> destroyer}}
 	{{else}}
 	  BEGIN!
 	  {{> createAvatarMenu}}
 	{{/if}}
+	</div>
 </template>
 
 <template name="avatarDisplay">
-  <canvas id="avatar-canvas" height="680" width="625"></canvas>
+  <div id="avatar-display">
+    <canvas id="avatar-canvas" height="680" width="625"></canvas>
+  </div>
 </template>
 
 <template name="itemMenu">
-  <img src="thumbnails/MaleA_Head.png">
+  <div id="item-menu">
+    {{#each items}}
+      <img class="item-thumbnail equippable" src="thumbnails/{{thumbnail}}" alt="{{name}}"> 
+    {{/each}}
+    {{> destroyer}}
+  </div>
 </template>
 
 <template name="destroyer">
