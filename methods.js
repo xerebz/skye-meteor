@@ -13,17 +13,17 @@ Meteor.methods({
     _.each(starter_pack, function(item) {
 
       //unlock each item for the user
-      Unlocks.insert({
+      InventoryItems.insert({
         'user_id': Meteor.userId(),
-        'item_id': item._id
+        'item': item
       });
 
       //equip only the male starter items for the user since you start out a male
       if (item.gender === 'male') {
-        Equips.insert({
+        EquippedItems.insert({
           'user_id': Meteor.userId(),
           'item_type': item.type,
-          'item_id': item._id
+          'item': item
         });
       }
 
@@ -33,7 +33,7 @@ Meteor.methods({
       'user_id': Meteor.userId(),
       'sex': 'Male',
 	    'skin': 'A',
-	    'body': default_body._id,
+	    'body': default_body,
     });
 
     Wallets.insert({
@@ -45,26 +45,57 @@ Meteor.methods({
   },
 
   destroyAvatar: function() {
+
     Avatars.remove({
       'user_id': Meteor.userId()
     });
-    Equips.remove({
+
+    EquippedItems.remove({
       'user_id': Meteor.userId()
     });
-    Unlocks.remove({
+
+    InventoryItems.remove({
       'user_id': Meteor.userId()
     });
+
     Wallets.remove({
       'user_id': Meteor.userId()
     });
+
   },
 
-  equip: function(item) {
-    Equips.update(
-      { "user_id": Meteor.userId(), "item_type": item.type },
-      { $set: { "item_id" : item._id } },
-      { upsert : true }
+  handleEquip: function(item) {
+
+    var isCurrentlyEquipped = EquippedItems.find( { "user_id": Meteor.userId(), "item.name": item.name } ).count();
+
+    if ( isCurrentlyEquipped > 0 ) {
+      EquippedItems.remove({ "user_id": Meteor.userId(), "item.name": item.name });
+    } else {
+      EquippedItems.update(
+        { "user_id": Meteor.userId(), "item_type": item.type },
+        { $set: { "item" : item } },
+        { upsert : true }
+      );      
+    }
+
+  },
+
+  buy: function(item) {
+
+    InventoryItems.insert({
+      "user_id": Meteor.userId(),
+      "item": item
+    });
+
+  },
+
+  sell: function(item) {
+
+    InventoryItems.remove(
+      { "user_id": Meteor.userId(), "item": item },
+      { justOne: true }
     );
+    
   }
 
 });

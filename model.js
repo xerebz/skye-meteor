@@ -7,10 +7,10 @@ Items = new Meteor.Collection("items");
 Avatars = new Meteor.Collection("avatars");
 
 // Items currently equipped
-Equips = new Meteor.Collection("equips");
+EquippedItems = new Meteor.Collection("equippedItems");
 
 // User item unlocks
-Unlocks = new Meteor.Collection("unlocks");
+InventoryItems = new Meteor.Collection("inventoryItems");
 
 // Outfits?
 Outfits = new Meteor.Collection("outfits");

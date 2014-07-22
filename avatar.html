@@ -14,14 +14,19 @@
 
 <template name="avatarDisplay">
   <div id="avatar-display">
-    <canvas id="avatar-canvas" height="680" width="625"></canvas>
+    <!-- <canvas id="avatar-canvas" height="680" width="625"></canvas> -->
+    {{#each equippedItems}}
+      {{#each item.layers}}
+        <img class="avatar-layer" style="z-index:{{zindex}}" src="images/{{filename}}" />
+      {{/each}}
+    {{/each}}
   </div>
 </template>
 
 <template name="itemMenu">
   <div id="item-menu">
-    {{#each items}}
-      <img class="item-thumbnail item" src="thumbnails/{{thumbnail}}" alt="{{name}}"> 
+    {{#each inventoryItems}}
+      <img class="item-thumbnail item" src="thumbnails/{{item.thumbnail}}" alt="{{item.name}}" /> 
     {{/each}}
     {{> destroyer}}
   </div>

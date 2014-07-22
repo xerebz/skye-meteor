@@ -11,7 +11,7 @@ Meteor.startup(function() {
 	  	"layers": [
 	  	  {
 	  	  	"filename": "SkyeERCitizen-PeriwinkleNWhite-Blouse.png",
-	  	  	"z-index": 100
+	  	  	"zindex": 100
 	  	  }
 	  	]
 	  },
@@ -24,7 +24,7 @@ Meteor.startup(function() {
     	"layers": [
 	  	  {
 	  	  	"filename": "SkyeERCitizenUniform-Navy-DressShirt.png",
-	  	  	"z-index": 50
+	  	  	"zindex": "50"
 	  	  }
 	  	]
 	  },
@@ -34,43 +34,40 @@ Meteor.startup(function() {
     	"layers": [
 				{
 					"filename": "MaleA_Arm_Back.png",
-					"z-index": 51
+					"zindex": 51
 				},
 				{
 					"filename": "MaleA_Arm_Front.png",
-					"z-index": 52
+					"zindex": 52
 				},
 				{
 					"filename": "MaleA_Feet.png",
-					"z-index": 53
+					"zindex": 53
 				},
 				{
 					"filename": "MaleA_Hand_Back.png",
-					"z-index": 54
+					"zindex": 54
 				},
 				{
 					"filename": "MaleA_Hand_Front.png",
-					"z-index": 55
+					"zindex": 55
 				},
 				{
 					"filename": "MaleA_Head.png",
-					"z-index": 56
+					"zindex": 56
 				},
 				{
 					"filename": "MaleA_Legs.png",
-					"z-index": 57
+					"zindex": 57
 				},
 				{
 					"filename": "MaleA_Torso.png",
-					"z-index": 58
+					"zindex": 58
 				}
 	  	]
 	  }
 	];
   
-  //start fresh
-	Items.remove({});
-
   //insert fixtures into db
 	if ( Items.find().count() === 0 ) {
 	  _.each(items_fixtures, function(fixture) {
