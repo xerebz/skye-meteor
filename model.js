@@ -1,13 +1,16 @@
 // Database collections are laid out here
 
-// All equippable items
-Equippables = new Meteor.Collection("equippables");
+// All item items
+Items = new Meteor.Collection("items");
 
 // All avatars
 Avatars = new Meteor.Collection("avatars");
 
-// User inventories
-Inventories = new Meteor.Collection("inventories");
+// Items currently equipped
+Equips = new Meteor.Collection("equips");
+
+// User item unlocks
+Unlocks = new Meteor.Collection("unlocks");
 
 // Outfits?
 Outfits = new Meteor.Collection("outfits");

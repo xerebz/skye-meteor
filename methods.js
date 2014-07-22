@@ -3,38 +3,55 @@ Meteor.methods({
   //creating a user avatar for the first time
   createAvatar: function() {
 
-  	var default_body = Equippables.findOne({'name': 'Male A Body'}, {fields: {'_id':1}});
+    //the default body is Male skin A
+  	var default_body = Items.findOne({'name': 'Male A Body'});
 
-    var starter_pack = Equippables.find({'itempack': 'starter'}).fetch();
-    var starter_pack_ids = _.pluck(starter_pack, '_id');
+    //each new players gets a starter pack of items, here we fetch this array
+    var starter_pack = Items.find({'itempack': 'starter'}).fetch();
 
-    var initially_equipped_items = _.where(starter_pack, { gender: 'male' });
-    var initially_equipped_items_ids = _.pluck(initially_equipped_items, '_id');
+    //for each starter pack item...
+    _.each(starter_pack, function(item) {
+
+      //unlock each item for the user
+      Unlocks.insert({
+        'user_id': Meteor.userId(),
+        'item_id': item._id
+      });
+
+      //equip only the male starter items for the user since you start out a male
+      if (item.gender === 'male') {
+        Equips.insert({
+          'user_id': Meteor.userId(),
+          'item_type': item.type,
+          'item_id': item._id
+        });
+      }
+
+    });
 
     Avatars.insert({
       'user_id': Meteor.userId(),
       'sex': 'Male',
-	    'skintone': 'A',
+	    'skin': 'A',
 	    'body': default_body._id,
-      'equipped_items': initially_equipped_items_ids
     });
-    Inventories.insert({
-    	'user_id': Meteor.userId(),
-    	'items': starter_pack_ids
-    });
+
     Wallets.insert({
     	'user_id': Meteor.userId(),
     	'gems': 100,
     	'hearts': 0
     });
+
   },
 
   destroyAvatar: function() {
-    // if no avatar? some validation here plox
     Avatars.remove({
       'user_id': Meteor.userId()
     });
-    Inventories.remove({
+    Equips.remove({
+      'user_id': Meteor.userId()
+    });
+    Unlocks.remove({
       'user_id': Meteor.userId()
     });
     Wallets.remove({
@@ -42,14 +59,12 @@ Meteor.methods({
     });
   },
 
-  equip: function(equippable) {
-    Avatars.update({"user_id": Meteor.userId()}, { $push: {
-                                  equipped_items: {
-                                             $each: [ <value1>, <value2>, ... ],
-                                             $position: <num>
-                                  }
-                               }
-                      });
+  equip: function(item) {
+    Equips.update(
+      { "user_id": Meteor.userId(), "item_type": item.type },
+      { $set: { "item_id" : item._id } },
+      { upsert : true }
+    );
   }
 
 });

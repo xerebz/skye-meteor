@@ -1,8 +1,8 @@
 Template.avatarDisplay.helpers({
-  equippedItems: function() {
-	  var equipped_items_array = Avatars.findOne({ "user_id" : Meteor.userId() }).equipped_items;
-	  return Equippables.find({ "_id" : { $in: items_array } }).fetch();
-  }
+  // equippedItems: function() {
+	 //  var equipped_items_array = Avatars.findOne({ "user_id" : Meteor.userId() }).equipped_items;
+	 //  return Items.find({ "_id" : { $in: items_array } }).fetch();
+  // }
 });
 
 Template.avatarDisplay.rendered = function() {

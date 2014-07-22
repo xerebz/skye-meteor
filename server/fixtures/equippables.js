@@ -1,11 +1,13 @@
 Meteor.startup(function() {
 
-  //array of equippables
-  var equippables_fixtures = [
+  //array of items
+  var items_fixtures = [
 	  {	"name": "Periwinkle Skye Citizen Uniform Blouse",
 	  	"gender": "female",
 	  	"itempack": "starter",
 	  	"thumbnail": "SkyeERCitizen-PeriwinkleNWhite-Blouse.png",
+	  	"category": "top",
+	  	"type": "blouse",
 	  	"layers": [
 	  	  {
 	  	  	"filename": "SkyeERCitizen-PeriwinkleNWhite-Blouse.png",
@@ -17,6 +19,8 @@ Meteor.startup(function() {
     	"gender": "male",
     	"itempack": "starter",
 	  	"thumbnail": "SkyeERCitizenUniform-Navy-DressShirt.png",
+	  	"category": "top",
+	  	"type": "dress shirt",
     	"layers": [
 	  	  {
 	  	  	"filename": "SkyeERCitizenUniform-Navy-DressShirt.png",
@@ -26,6 +30,7 @@ Meteor.startup(function() {
 	  },
 	  { "name": "Male A Body",
     	"gender": "male",
+    	"category": "body",
     	"layers": [
 				{
 					"filename": "MaleA_Arm_Back.png",
@@ -64,12 +69,12 @@ Meteor.startup(function() {
 	];
   
   //start fresh
-	Equippables.remove({});
+	Items.remove({});
 
   //insert fixtures into db
-	if ( Equippables.find().count() === 0 ) {
-	  _.each(equippables_fixtures, function(fixture) {
-	  	Equippables.insert(fixture);
+	if ( Items.find().count() === 0 ) {
+	  _.each(items_fixtures, function(fixture) {
+	  	Items.insert(fixture);
 	  });
 	}
 
