@@ -92,6 +92,24 @@ Meteor.methods({
       { justOne: true }
     );
     
+  },
+
+  grind: function() {
+
+    Wallets.update(
+      { 'user_id': Meteor.userId() },
+      { $inc: { 'gems': 100 } }
+    );
+
+  },
+
+  donate: function() {
+
+    Wallets.update(
+      { 'user_id': Meteor.userId() },
+      { $inc: { 'hearts': 10 } }
+    );
+
   }
 
 });
