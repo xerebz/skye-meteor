@@ -1,33 +1,52 @@
 Template.avatarDisplay.helpers({
- //  displayEquippedItems: function() {
-	//   var equippedItems = EquippedItems.find({ "user_id" : Meteor.userId() }).fetch();
-	//   var ctx = $("#avatar-canvas")[0].getContext("2d");
-	//   _.each(equippedItems, function(item) {
-	//   	_.each(item.layers, function(img) {
-	// 		  var img = new Image();
-	// 		  img.src = "images/"+img.filename;
-	// 		  img.onload = function() {
-	// 		  	ctx.drawImage(img,0,0);
-	// 		  }
-	// 	  });
-	// 	});
-	// }
-	equippedItems: function() {
-		return EquippedItems.find({ 'user_id': Meteor.userId() }).fetch();
-	},
-	suzy: function() {
-	  var stage = new Kinetic.Stage();
-	      container: 'grid_map'
-	      width: 385
-	      height: 375
-	  var layer = new Kinetic.Layer()	
-	},
-	pants: function() {
-		console.log("you know dis gon fail");
-		console.log(stage);
-	}
+
 });
 
 Template.avatarDisplay.rendered = function() {
+	
+  var stage = new Kinetic.Stage({
+        container: "avatar-display",
+        width: 625,
+        height: 680
+      });
+
+  var layer = new Kinetic.Layer();
+
+  stage.add(layer);
+
+  //subscribe the layer with equipment updates
+  Deps.autorun(function () {
+    drawItems(layer);
+  });
+
+};
+
+var drawItem = function (equippedItem, layer) {
+  _.each(equippedItem.item.layers, function(itemLayer) {
+    var img = new Image();
+    img.src = "images/"+itemLayer.filename;
+    img.onload = function() {
+      var kImg = new Kinetic.Image({
+        image: img
+      });
+      layer.add(kImg);
+      console.log(itemLayer.zindex);
+      kImg.setZIndex(50);
+      console.log(kImg.getZIndex());
+    };
+  }); 
+};
+
+var drawItems = function(layer) {
+  // clear the canvas before a redraw
+  if (layer) {
+    layer.removeChildren();
+    layer.clear();
+  }
+
+  EquippedItems.find({ "user_id" : Meteor.userId() }).forEach( function(equippedItem) {
+    drawItem(equippedItem, layer);
+    layer.draw();
+  });
 
 };

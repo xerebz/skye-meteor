@@ -24,13 +24,26 @@ Meteor.startup(function() {
     	"layers": [
 	  	  {
 	  	  	"filename": "SkyeERCitizenUniform-Navy-DressShirt.png",
-	  	  	"zindex": "50"
+	  	  	"zindex": 50
+	  	  }
+	  	]
+	  },
+	  { "name": "Homecoming Trail Background",
+    	"itempack": "starter",
+	  	"thumbnail": "HomecomingTrail-Background.png",
+	  	"category": "top",
+	  	"type": "background",
+    	"layers": [
+	  	  {
+	  	  	"filename": "HomecomingTrail-Background.png",
+	  	  	"zindex": 10
 	  	  }
 	  	]
 	  },
 	  { "name": "Male A Body",
     	"gender": "male",
     	"category": "body",
+    	"itempack": "starter",
     	"layers": [
 				{
 					"filename": "MaleA_Arm_Back.png",
@@ -67,6 +80,8 @@ Meteor.startup(function() {
 	  	]
 	  }
 	];
+
+	Items.remove({});
   
   //insert fixtures into db
 	if ( Items.find().count() === 0 ) {

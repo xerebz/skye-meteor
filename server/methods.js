@@ -35,7 +35,7 @@ Meteor.methods({
       });
 
       //equip only the male starter items for the user since you start out a male
-      if (item.gender === 'male') {
+      if (item.gender !== 'female') {
         EquippedItems.insert({
           'user_id': Meteor.userId(),
           'item_type': item.type,
