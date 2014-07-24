@@ -1,7 +1,12 @@
 <template name="avatarInventory">
-  <div id="avatar-inventory">
-    {{#each inventoryItems}}
-      <img class="item-thumbnail" src="thumbnails/{{item.thumbnail}}" alt="{{item.name}}" /> 
-    {{/each}}
+  <div id="avatar-inventory" class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Inventory</h3>
+    </div>
+    <div class="panel-body">
+	    {{#each inventoryItems}}
+	      <img class="item-thumbnail img-rounded" src="thumbnails/{{item.thumbnail}}" alt="{{item.name}}" /> 
+	    {{/each}}
+		</div>
   </div>
 </template>

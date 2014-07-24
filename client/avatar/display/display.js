@@ -3,50 +3,35 @@ Template.avatarDisplay.helpers({
 });
 
 Template.avatarDisplay.rendered = function() {
-	
-  var stage = new Kinetic.Stage({
-        container: "avatar-display",
-        width: 625,
-        height: 680
-      });
 
-  var layer = new Kinetic.Layer();
+  //global stage should be file scoped
+  stage = new createjs.Stage("avatar-canvas");
 
-  stage.add(layer);
-
-  //subscribe the layer with equipment updates
+  //rerun the drawing process if equipment changes
   Deps.autorun(function () {
-    drawItems(layer);
+    drawItems(stage);
   });
 
 };
 
-var drawItem = function (equippedItem, layer) {
+var drawItem = function (equippedItem) {
+  //draw each layer of the item
   _.each(equippedItem.item.layers, function(itemLayer) {
     var img = new Image();
     img.src = "images/"+itemLayer.filename;
+    var bitmap = new createjs.Bitmap(img);
+    stage.addChild(bitmap);
+    stage.setChildIndex(bitmap, itemLayer.zindex);
     img.onload = function() {
-      var kImg = new Kinetic.Image({
-        image: img
-      });
-      layer.add(kImg);
-      console.log(itemLayer.zindex);
-      kImg.setZIndex(50);
-      console.log(kImg.getZIndex());
+      stage.update();
     };
   }); 
 };
 
-var drawItems = function(layer) {
-  // clear the canvas before a redraw
-  if (layer) {
-    layer.removeChildren();
-    layer.clear();
-  }
+var drawItems = function() {
 
   EquippedItems.find({ "user_id" : Meteor.userId() }).forEach( function(equippedItem) {
-    drawItem(equippedItem, layer);
-    layer.draw();
+    drawItem(equippedItem);
   });
 
 };

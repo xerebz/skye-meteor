@@ -6,7 +6,7 @@
       "iron-router": {},
       "bootstrap3-less": {},
       "fast-render": {},
-      "kinetic.js": {}
+      "createjs": {}
     },
     "packages": {
       "accounts-ui-bootstrap-3": {
@@ -29,10 +29,10 @@
         "tag": "v0.2.8",
         "commit": "149984b1aff3a5642a270aff9bd9006872c8302e"
       },
-      "kinetic.js": {
-        "git": "https://github.com/brentjanderson/meteor-kinetic.git",
-        "tag": "v5.1.0",
-        "commit": "0657c2faa36afadfb4405a8c9f6201710f7984b1"
+      "createjs": {
+        "git": "https://github.com/nrafter/meteor-createjs.git",
+        "tag": "v0.1.3",
+        "commit": "91abb4395006274f26d3178abb9391b3035caa9f"
       },
       "blaze-layout": {
         "git": "https://github.com/EventedMind/blaze-layout.git",

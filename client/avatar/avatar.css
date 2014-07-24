@@ -1,8 +1,4 @@
-canvas {
-	border: 1px dotted;
-}
-
-#item-menu, #avatar-display {
+#avatar > div {
 	display: inline-block;
 	vertical-align: top;
 }
