@@ -5,7 +5,9 @@
     </div>
     <div class="panel-body">
 	    {{#each inventoryItems}}
-	      <img class="item-thumbnail img-rounded" src="thumbnails/{{item.thumbnail}}" alt="{{item.name}}" /> 
+	      {{#if item.thumbnail}}
+	      	<img class="item-thumbnail img-rounded" src="thumbnails/{{item.thumbnail}}" alt="{{item.name}}" /> 
+	      {{/if}}
 	    {{/each}}
 		</div>
   </div>

@@ -11,7 +11,7 @@ Meteor.startup(function() {
 	  	"layers": [
 	  	  {
 	  	  	"filename": "SkyeERCitizen-PeriwinkleNWhite-Blouse.png",
-	  	  	"zindex": 100
+	  	  	"zindex": 101
 	  	  }
 	  	]
 	  },
@@ -24,7 +24,7 @@ Meteor.startup(function() {
     	"layers": [
 	  	  {
 	  	  	"filename": "SkyeERCitizenUniform-Navy-DressShirt.png",
-	  	  	"zindex": 50
+	  	  	"zindex": 100
 	  	  }
 	  	]
 	  },
