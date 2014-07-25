@@ -25,10 +25,10 @@ var mustBeSignedIn = function(pause) {
 
 Router.onBeforeAction(mustBeSignedIn, {except: ['login']});
 
-Hooks.onLoggedIn = function() {
-  Router.go('home');
-}
+// Hooks.onLoggedIn = function() {
+//   Router.go('home');
+// }
 
-Hooks.onLoggedOut = function() {
-  Router.go('login');
-}
+// Hooks.onLoggedOut = function() {
+//   Router.go('login');
+// }

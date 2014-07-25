@@ -1,7 +1,3 @@
-Template.avatarDisplay.helpers({
-
-});
-
 Template.avatarDisplay.rendered = function() {
 
   //remove 'select on double click' bug
@@ -15,6 +11,14 @@ Template.avatarDisplay.rendered = function() {
   Deps.autorun(function () {
     drawItems(stage);
   });
+
+  // autorun for briefs
+  // Deps.autorun(function() {
+  //  if (EquippedItems({"user-id": Meteor.userId(), "item.category": "pants"}).count() === 0) {
+  //    InventoryItems({"user-id": Meteor.userId(), "item.name": "Disappearing Briefs"});
+  //    Meteor.call('handleEquip', this.item);
+  //  }
+  // });
 
 };
 

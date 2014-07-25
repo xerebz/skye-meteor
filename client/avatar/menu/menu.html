@@ -1,0 +1,66 @@
+<template name="avatarMenu">
+  <div id="avatar-menu">
+    {{> sortBy}}
+    {{> itemSearch}}
+    {{> colorFind}}
+    {{> equippedItems}}
+    {{> newItems}}
+  </div>
+</template>
+
+<template name="sortBy">
+  <div class="dropdown">
+    <button class="btn btn-default dropdown-toggle" type="button" id="sortDropdrown" data-toggle="dropdown">
+      <span class="glyphicon glyphicon-th"></span>
+      Sort items by...
+      <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Favorites First</a></li>
+      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Color</a></li>
+      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Type</a></li>
+      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Date</a></li>
+      <li role="presentation" class="divider"></li>
+      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Price Ascending</a></li>
+      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Price Descending</a></li>
+    </ul>
+  </div>
+</template>
+
+<template name="itemSearch">
+  SEARCH
+</template>
+
+<template name="colorFind">
+  COLORS
+</template>
+
+<template name="equippedItems">
+  <div id="equipped-items" class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Equipped Items</h3>
+    </div>
+    <div class="panel-body">
+	    {{#each newItems}}
+	      {{#if item.thumbnail}}
+	      	<img class="item-thumbnail" src="thumbnails/{{item.thumbnail}}" alt="{{item.name}}" /> 
+	      {{/if}}
+	    {{/each}}
+		</div>
+  </div>
+</template>
+
+<template name="newItems">
+  <div id="new-items" class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">New Arrivals</h3>
+    </div>
+    <div class="panel-body">
+	    {{#each newItems}}
+	      {{#if item.thumbnail}}
+	      	<img class="item-thumbnail" src="thumbnails/{{item.thumbnail}}" alt="{{item.name}}" /> 
+	      {{/if}}
+	    {{/each}}
+		</div>
+  </div>
+</template>
