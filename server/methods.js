@@ -78,15 +78,11 @@ Meteor.methods({
 
   buy: function(item) {
 
-    var user = Wallets.findOne({ "user_id": Meteor.userId() });
-
-    var gemPrice = item.gemPrice;
-
     if (gemPrice < user.gems) {
 
       Wallets.update(
         { "user_id": Meteor.userId() },
-        { $inc: { 'gems': -gemPrice } }
+        { $inc: { 'gems': -item.gemBuyPrice } }
       );
 
       InventoryItems.insert({
@@ -100,11 +96,9 @@ Meteor.methods({
 
   sell: function(userItem) {
 
-    var sellPrice = Math.floor(userItem.item.gemPrice * 0.5);
-
     Wallets.update(
       { "user_id": Meteor.userId() },
-      { $inc: { 'gems': sellPrice } }
+      { $inc: { 'gems': gemSellPrice } }
     );
 
     InventoryItems.remove(

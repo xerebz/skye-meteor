@@ -7,8 +7,10 @@ Meteor.startup(function() {
 			"category": "hair",
 			"gender": "neutral",
 			"thumbnail": "BehindTheBlossoms-Pink-Hairstyle.png",
-			"gemPrice": 88,
-			"heartPrice": 9,
+			"gemBuyPrice": 88,
+			"gemSellPrice": 44,
+			"heartBuyPrice": 9,
+			"heartSellPrice": 4,
 			"layers": [
 			  {
 			  	"filename": "BehindTheBlossoms-Pink-Hairstyle.png",
@@ -21,8 +23,10 @@ Meteor.startup(function() {
 			"category": "hair",
 			"gender": "neutral",
 			"thumbnail": "BehindTheBlossoms-Lavender-Hairstyle.png",
-			"gemPrice": 88,
-			"heartPrice": 9,
+			"gemBuyPrice": 88,
+			"gemSellPrice": 44,
+			"heartBuyPrice": 9,
+			"heartSellPrice": 4,
 			"layers": [
 			  {
 			  	"filename": "BehindTheBlossoms-Lavender-Hairstyle.png",
@@ -35,8 +39,10 @@ Meteor.startup(function() {
 			"category": "shirt",
 			"gender": "male",
 			"thumbnail": "WarmThermal-Snow-LongSleevedShirt.png",
-			"gemPrice": 88,
-			"heartPrice": 9,
+			"gemBuyPrice": 88,
+			"gemSellPrice": 44,
+			"heartBuyPrice": 9,
+			"heartSellPrice": 4,
 			"layers": [
 			  {
 			  	"filename": "WarmThermal-Snow-LongSleevedShirt.png",
@@ -49,12 +55,14 @@ Meteor.startup(function() {
 			"category": "pet",
 			"gender": "neutral",
 			"thumbnail": "FleepTheCloudsheep-HoveringPose.png",
-			"gemPrice": 88,
-			"heartPrice": 9,
+			"gemBuyPrice": 88,
+			"gemSellPrice": 44,
+			"heartBuyPrice": 9,
+			"heartSellPrice": 4,
 			"layers": [
 			  {
 			  	"filename": "FleepTheCloudsheep-HoveringPose.png",
-			  	"zindex": 100
+			  	"zindex": 200
 			  }	  
 			]
 		},
@@ -63,8 +71,10 @@ Meteor.startup(function() {
 			"category": "eyes",
 			"gender": "neutral",
 			"thumbnail": "ChipperUpbeatNatural-ForestGreen-Eyes.png",
-			"gemPrice": 88,
-			"heartPrice": 9,
+			"gemBuyPrice": 88,
+			"gemSellPrice": 44,
+			"heartBuyPrice": 9,
+			"heartSellPrice": 4,
 			"layers": [
 			  {
 			  	"filename": "ChipperUpbeatNatural-ForestGreen-Eyes.png",
@@ -77,8 +87,10 @@ Meteor.startup(function() {
 			"category": "makeup",
 			"gender": "neutral",
 			"thumbnail": "BehindTheBlossoms-Blush-Makeup.png",
-			"gemPrice": 88,
-			"heartPrice": 9,
+			"gemBuyPrice": 88,
+			"gemSellPrice": 44,
+			"heartBuyPrice": 9,
+			"heartSellPrice": 4,
 			"layers": [
 			  {
 			  	"filename": "BehindTheBlossoms-Blush-Makeup.png",
@@ -90,14 +102,15 @@ Meteor.startup(function() {
 			"name": "SkyeERCitizenUniform-Navy-Jacket",
 			"category": "outerwear",
 			"gender": "male",
-			"itemPack": "starter",
 			"thumbnail": "SkyeERCitizenUniform-Navy-Jacket.png",
-			"gemPrice": 88,
-			"heartPrice": 9,
+			"gemBuyPrice": 88,
+			"gemSellPrice": 44,
+			"heartBuyPrice": 9,
+			"heartSellPrice": 4,
 			"layers": [
 			  {
 			  	"filename": "SkyeERCitizenUniform-Navy-Jacket.png",
-			  	"zindex": 100
+			  	"zindex": 110
 			  }	  
 			]
 		},
@@ -107,12 +120,14 @@ Meteor.startup(function() {
 			"gender": "male",
 			"itemPack": "starter",
 			"thumbnail": "SkyeERCitizenUniform-Navy-Slacks.png",
-			"gemPrice": 88,
-			"heartPrice": 9,
+			"gemBuyPrice": 88,
+			"gemSellPrice": 0,
+			"heartBuyPrice": 9,
+			"heartSellPrice": 0,
 			"layers": [
 			  {
 			  	"filename": "SkyeERCitizenUniform-Navy-Slacks.png",
-			  	"zindex": 100
+			  	"zindex": 80
 			  }	  
 			]
 		},
@@ -121,8 +136,10 @@ Meteor.startup(function() {
 			"category": "eyebrows",
 			"gender": "neutral",
 			"thumbnail": "BehindTheBlossoms-Chestnut-Eyebrows.png",
-			"gemPrice": 88,
-			"heartPrice": 9,
+			"gemBuyPrice": 88,
+			"gemSellPrice": 44,
+			"heartBuyPrice": 9,
+			"heartSellPrice": 4,
 			"layers": [
 			  {
 			  	"filename": "BehindTheBlossoms-Chestnut-Eyebrows.png",
@@ -135,8 +152,10 @@ Meteor.startup(function() {
 			"category": "mouth",
 			"gender": "neutral",
 			"thumbnail": "Piqued-Mouth.png",
-			"gemPrice": 88,
-			"heartPrice": 9,
+			"gemBuyPrice": 88,
+			"gemSellPrice": 44,
+			"heartBuyPrice": 9,
+			"heartSellPrice": 4,
 			"layers": [
 			  {
 			  	"filename": "Piqued-Mouth.png",
@@ -148,18 +167,19 @@ Meteor.startup(function() {
 			"name": "SkyeERCitizen-Navy-TracksuitJacket",
 			"category": "outerwear",
 			"gender": "male",
-			"itemPack": "starter",
 			"thumbnail": "SkyeERCitizen-Navy-TracksuitJacket.png",
-			"gemPrice": 88,
-			"heartPrice": 9,
+			"gemBuyPrice": 88,
+			"gemSellPrice": 44,
+			"heartBuyPrice": 9,
+			"heartSellPrice": 4,
 			"layers": [
 			  {
 			  	"filename": "1of2SkyeERCitizen-Navy-TracksuitJacket.png",
-			  	"zindex": 100
+			  	"zindex": 130
 			  },
 			  {
 			  	"filename": "2of2SkyeERCitizen-Navy-TracksuitJacket.png",
-			  	"zindex": 100
+			  	"zindex": 40
 			  }
 			]
 		},
@@ -168,8 +188,10 @@ Meteor.startup(function() {
 			"category": "mouth",
 			"gender": "neutral",
 			"thumbnail": "SpeakingContentedly-Mouth.png",
-			"gemPrice": 88,
-			"heartPrice": 9,
+			"gemBuyPrice": 88,
+			"gemSellPrice": 44,
+			"heartBuyPrice": 9,
+			"heartSellPrice": 4,
 			"layers": [
 			  {
 			  	"filename": "SpeakingContentedly-Mouth.png",
@@ -182,8 +204,10 @@ Meteor.startup(function() {
 			"category": "scarf",
 			"gender": "neutral",
 			"thumbnail": "CheckeredPuff-Purple-Scarf.png",
-			"gemPrice": 88,
-			"heartPrice": 9,
+			"gemBuyPrice": 88,
+			"gemSellPrice": 44,
+			"heartBuyPrice": 9,
+			"heartSellPrice": 4,
 			"layers": [
 			  {
 			  	"filename": "1of2CheckeredPuff-Purple-Scarf.png",
@@ -200,8 +224,10 @@ Meteor.startup(function() {
 			"category": "mouth",
 			"gender": "neutral",
 			"thumbnail": "CheekyGrin-Mouth.png",
-			"gemPrice": 88,
-			"heartPrice": 9,
+			"gemBuyPrice": 88,
+			"gemSellPrice": 44,
+			"heartBuyPrice": 9,
+			"heartSellPrice": 4,
 			"layers": [
 			  {
 			  	"filename": "CheekyGrin-Mouth.png",
@@ -214,8 +240,10 @@ Meteor.startup(function() {
 			"category": "eyebrows",
 			"gender": "neutral",
 			"thumbnail": "CalmingGaze-SiennaBrown-Eyebrows.png",
-			"gemPrice": 88,
-			"heartPrice": 9,
+			"gemBuyPrice": 88,
+			"gemSellPrice": 44,
+			"heartBuyPrice": 9,
+			"heartSellPrice": 4,
 			"layers": [
 			  {
 			  	"filename": "CalmingGaze-SiennaBrown-Eyebrows.png",
@@ -229,8 +257,10 @@ Meteor.startup(function() {
 			"gender": "female",
 			"itemPack": "starter",
 			"thumbnail": "SkyeERCitizen-PinkNWhite-Skirt.png",
-			"gemPrice": 88,
-			"heartPrice": 9,
+			"gemBuyPrice": 88,
+			"gemSellPrice": 0,
+			"heartBuyPrice": 9,
+			"heartSellPrice": 0,
 			"layers": [
 			  {
 			  	"filename": "SkyeERCitizen-PinkNWhite-Skirt.png",
@@ -244,8 +274,10 @@ Meteor.startup(function() {
 			"gender": "female",
 			"itemPack": "starter",
 			"thumbnail": "SkyeERCitizen-PinkNWhite-Blouse.png",
-			"gemPrice": 88,
-			"heartPrice": 9,
+			"gemBuyPrice": 88,
+			"gemSellPrice": 0,
+			"heartBuyPrice": 9,
+			"heartSellPrice": 4,
 			"layers": [
 			  {
 			  	"filename": "SkyeERCitizen-PinkNWhite-Blouse.png",
@@ -258,8 +290,10 @@ Meteor.startup(function() {
 			"category": "scarf",
 			"gender": "neutral",
 			"thumbnail": "CheckeredPuff-Red-Scarf.png",
-			"gemPrice": 88,
-			"heartPrice": 9,
+			"gemBuyPrice": 88,
+			"gemSellPrice": 44,
+			"heartBuyPrice": 9,
+			"heartSellPrice": 4,
 			"layers": [
 			  {
 			  	"filename": "1of2CheckeredPuff-Red-Scarf.png",
@@ -277,12 +311,14 @@ Meteor.startup(function() {
 			"gender": "male",
 			"itemPack": "starter",
 			"thumbnail": "SkyeERCitizenUniform-Navy-Loafers.png",
-			"gemPrice": 88,
-			"heartPrice": 9,
+			"gemBuyPrice": 88,
+			"gemSellPrice": 0,
+			"heartBuyPrice": 9,
+			"heartSellPrice": 4,
 			"layers": [
 			  {
 			  	"filename": "SkyeERCitizenUniform-Navy-Loafers.png",
-			  	"zindex": 100
+			  	"zindex": 70
 			  }	  
 			]
 		},
@@ -291,8 +327,10 @@ Meteor.startup(function() {
 			"category": "eyebrows",
 			"gender": "neutral",
 			"thumbnail": "DraconianRule-Crimson-Eyebrows.png",
-			"gemPrice": 88,
-			"heartPrice": 9,
+			"gemBuyPrice": 88,
+			"gemSellPrice": 44,
+			"heartBuyPrice": 9,
+			"heartSellPrice": 4,
 			"layers": [
 			  {
 			  	"filename": "DraconianRule-Crimson-Eyebrows.png",
@@ -306,8 +344,10 @@ Meteor.startup(function() {
 			"gender": "female",
 			"itemPack": "starter",
 			"thumbnail": "SkyeERCitizen-PinkNWhite-Stockings.png",
-			"gemPrice": 88,
-			"heartPrice": 9,
+			"gemBuyPrice": 88,
+			"gemSellPrice": 0,
+			"heartBuyPrice": 9,
+			"heartSellPrice": 4,
 			"layers": [
 			  {
 			  	"filename": "SkyeERCitizen-PinkNWhite-Stockings.png",
@@ -320,8 +360,10 @@ Meteor.startup(function() {
 			"category": "outerwear",
 			"gender": "female",
 			"thumbnail": "BehindTheBlossomsFloppy-Pink-KnitSweater.png",
-			"gemPrice": 88,
-			"heartPrice": 9,
+			"gemBuyPrice": 88,
+			"gemSellPrice": 44,
+			"heartBuyPrice": 9,
+			"heartSellPrice": 4,
 			"layers": [
 			  {
 			  	"filename": "BehindTheBlossomsFloppy-Pink-KnitSweater.png",
@@ -334,8 +376,10 @@ Meteor.startup(function() {
 			"category": "eyes",
 			"gender": "neutral",
 			"thumbnail": "GrumpySpectre-Indigo-Eyes.png",
-			"gemPrice": 88,
-			"heartPrice": 9,
+			"gemBuyPrice": 88,
+			"gemSellPrice": 44,
+			"heartBuyPrice": 9,
+			"heartSellPrice": 4,
 			"layers": [
 			  {
 			  	"filename": "GrumpySpectre-Indigo-Eyes.png",
@@ -348,8 +392,10 @@ Meteor.startup(function() {
 			"category": "headphones",
 			"gender": "neutral",
 			"thumbnail": "BuddingBeat-White-Headphones.png",
-			"gemPrice": 88,
-			"heartPrice": 9,
+			"gemBuyPrice": 88,
+			"gemSellPrice": 44,
+			"heartBuyPrice": 9,
+			"heartSellPrice": 4,
 			"layers": [
 			  {
 			  	"filename": "1of2BuddingBeat-White-Headphones.png",
@@ -366,8 +412,10 @@ Meteor.startup(function() {
 			"category": "eyes",
 			"gender": "neutral",
 			"thumbnail": "TrustingPeer-AgateGreen-Eyes.png",
-			"gemPrice": 88,
-			"heartPrice": 9,
+			"gemBuyPrice": 88,
+			"gemSellPrice": 44,
+			"heartBuyPrice": 9,
+			"heartSellPrice": 4,
 			"layers": [
 			  {
 			  	"filename": "TrustingPeer-AgateGreen-Eyes.png",
@@ -378,15 +426,17 @@ Meteor.startup(function() {
 		{
 			"name": "SkyeERCitizen-PeriwinkleNWhite-Loafers",
 			"category": "shoes",
-			"gender": "male",
+			"gender": "female",
 			"itemPack": "starter",
 			"thumbnail": "SkyeERCitizen-PeriwinkleNWhite-Loafers.png",
-			"gemPrice": 88,
-			"heartPrice": 9,
+			"gemBuyPrice": 88,
+			"gemSellPrice": 0,
+			"heartBuyPrice": 9,
+			"heartSellPrice": 4,
 			"layers": [
 			  {
 			  	"filename": "SkyeERCitizen-PeriwinkleNWhite-Loafers.png",
-			  	"zindex": 100
+			  	"zindex": 70
 			  }	  
 			]
 		},
@@ -395,8 +445,10 @@ Meteor.startup(function() {
 			"category": "eyebrows",
 			"gender": "neutral",
 			"thumbnail": "TrustingPeer-Gray-Eyebrows.png",
-			"gemPrice": 88,
-			"heartPrice": 9,
+			"gemBuyPrice": 88,
+			"gemSellPrice": 44,
+			"heartBuyPrice": 9,
+			"heartSellPrice": 4,
 			"layers": [
 			  {
 			  	"filename": "TrustingPeer-Gray-Eyebrows.png",
@@ -409,8 +461,10 @@ Meteor.startup(function() {
 			"category": "eyes",
 			"gender": "neutral",
 			"thumbnail": "CalmingGaze-Eyes-GlassBlue.png",
-			"gemPrice": 88,
-			"heartPrice": 9,
+			"gemBuyPrice": 88,
+			"gemSellPrice": 44,
+			"heartBuyPrice": 9,
+			"heartSellPrice": 4,
 			"layers": [
 			  {
 			  	"filename": "CalmingGaze-Eyes-GlassBlue.png",
@@ -423,8 +477,10 @@ Meteor.startup(function() {
 			"category": "eyes",
 			"gender": "neutral",
 			"thumbnail": "BehindTheBlossoms-Auburn-Eyes.png",
-			"gemPrice": 88,
-			"heartPrice": 9,
+			"gemBuyPrice": 88,
+			"gemSellPrice": 44,
+			"heartBuyPrice": 9,
+			"heartSellPrice": 4,
 			"layers": [
 			  {
 			  	"filename": "BehindTheBlossoms-Auburn-Eyes.png",
@@ -438,8 +494,10 @@ Meteor.startup(function() {
 			"gender": "female",
 			"itemPack": "starter",
 			"thumbnail": "SkyeERCitizen-PeriwinkleNWhite-Stockings.png",
-			"gemPrice": 88,
-			"heartPrice": 9,
+			"gemBuyPrice": 88,
+			"gemSellPrice": 0,
+			"heartBuyPrice": 9,
+			"heartSellPrice": 4,
 			"layers": [
 			  {
 			  	"filename": "SkyeERCitizen-PeriwinkleNWhite-Stockings.png",
@@ -452,8 +510,10 @@ Meteor.startup(function() {
 			"category": "eyes",
 			"gender": "neutral",
 			"thumbnail": "SereneKindness-OceanBlue-Eyes.png",
-			"gemPrice": 88,
-			"heartPrice": 9,
+			"gemBuyPrice": 88,
+			"gemSellPrice": 44,
+			"heartBuyPrice": 9,
+			"heartSellPrice": 4,
 			"layers": [
 			  {
 			  	"filename": "SereneKindness-OceanBlue-Eyes.png",
@@ -467,12 +527,14 @@ Meteor.startup(function() {
 			"gender": "male",
 			"itemPack": "starter",
 			"thumbnail": "SkyeERCitizenUniform-Navy-DressShirt.png",
-			"gemPrice": 88,
-			"heartPrice": 9,
+			"gemBuyPrice": 88,
+			"gemSellPrice": 0,
+			"heartBuyPrice": 9,
+			"heartSellPrice": 4,
 			"layers": [
 			  {
 			  	"filename": "SkyeERCitizenUniform-Navy-DressShirt.png",
-			  	"zindex": 100
+			  	"zindex": 90
 			  }	  
 			]
 		},
@@ -481,8 +543,10 @@ Meteor.startup(function() {
 			"category": "hair",
 			"gender": "female",
 			"thumbnail": "PeppyPreppy-Raspberry-PonytailHairstyle.png",
-			"gemPrice": 88,
-			"heartPrice": 9,
+			"gemBuyPrice": 88,
+			"gemSellPrice": 44,
+			"heartBuyPrice": 9,
+			"heartSellPrice": 4,
 			"layers": [
 			  {
 			  	"filename": "PeppyPreppy-Raspberry-PonytailHairstyle.png",
@@ -495,8 +559,10 @@ Meteor.startup(function() {
 			"category": "makeup",
 			"gender": "neutral",
 			"thumbnail": "SereneKindess-Flushed-EyeshdwNBlushMakeup.png",
-			"gemPrice": 88,
-			"heartPrice": 9,
+			"gemBuyPrice": 88,
+			"gemSellPrice": 44,
+			"heartBuyPrice": 9,
+			"heartSellPrice": 4,
 			"layers": [
 			  {
 			  	"filename": "SereneKindess-Flushed-EyeshdwNBlushMakeup.png",
@@ -509,8 +575,10 @@ Meteor.startup(function() {
 			"category": "tights",
 			"gender": "female",
 			"thumbnail": "SemiSheenLycra-Black-Tights.png",
-			"gemPrice": 88,
-			"heartPrice": 9,
+			"gemBuyPrice": 88,
+			"gemSellPrice": 44,
+			"heartBuyPrice": 9,
+			"heartSellPrice": 4,
 			"layers": [
 			  {
 			  	"filename": "SemiSheenLycra-Black-Tights.png",
@@ -523,8 +591,10 @@ Meteor.startup(function() {
 			"category": "tights",
 			"gender": "female",
 			"thumbnail": "SemiSheenLycra-Silver-Tights.png",
-			"gemPrice": 88,
-			"heartPrice": 9,
+			"gemBuyPrice": 88,
+			"gemSellPrice": 44,
+			"heartBuyPrice": 9,
+			"heartSellPrice": 4,
 			"layers": [
 			  {
 			  	"filename": "SemiSheenLycra-Silver-Tights.png",
@@ -537,8 +607,10 @@ Meteor.startup(function() {
 			"category": "mouth",
 			"gender": "neutral",
 			"thumbnail": "DecidedlySatisfiedSmile-Mouth.png",
-			"gemPrice": 88,
-			"heartPrice": 9,
+			"gemBuyPrice": 88,
+			"gemSellPrice": 44,
+			"heartBuyPrice": 9,
+			"heartSellPrice": 4,
 			"layers": [
 			  {
 			  	"filename": "DecidedlySatisfiedSmile-Mouth.png",
@@ -551,8 +623,10 @@ Meteor.startup(function() {
 			"category": "outerwear",
 			"gender": "female",
 			"thumbnail": "BehindTheBlossomsFloppy-Lavender-KnitSweater.png",
-			"gemPrice": 88,
-			"heartPrice": 9,
+			"gemBuyPrice": 88,
+			"gemSellPrice": 44,
+			"heartBuyPrice": 9,
+			"heartSellPrice": 4,
 			"layers": [
 			  {
 			  	"filename": "BehindTheBlossomsFloppy-Lavender-KnitSweater.png",
@@ -566,8 +640,10 @@ Meteor.startup(function() {
 			"gender": "neutral",
 			"itemPack": "starter",
 			"thumbnail": "HomecomingTrail-Background.png",
-			"gemPrice": 88,
-			"heartPrice": 9,
+			"gemBuyPrice": 88,
+			"gemSellPrice": 0,
+			"heartBuyPrice": 9,
+			"heartSellPrice": 4,
 			"layers": [
 			  {
 			  	"filename": "HomecomingTrail-Background.png",
@@ -581,8 +657,10 @@ Meteor.startup(function() {
 			"gender": "neutral",
 			"itemPack": "starter",
 			"thumbnail": "MischeivousThought-AshBrown-Eyebrows.png",
-			"gemPrice": 88,
-			"heartPrice": 9,
+			"gemBuyPrice": 88,
+			"gemSellPrice": 0,
+			"heartBuyPrice": 9,
+			"heartSellPrice": 4,
 			"layers": [
 			  {
 			  	"filename": "MischeivousThought-AshBrown-Eyebrows.png",
@@ -595,8 +673,10 @@ Meteor.startup(function() {
 			"category": "mouth",
 			"gender": "neutral",
 			"thumbnail": "UghNoMouth.png",
-			"gemPrice": 88,
-			"heartPrice": 9,
+			"gemBuyPrice": 88,
+			"gemSellPrice": 44,
+			"heartBuyPrice": 9,
+			"heartSellPrice": 4,
 			"layers": [
 			  {
 			  	"filename": "UghNoMouth.png",
@@ -609,8 +689,10 @@ Meteor.startup(function() {
 			"category": "mouth",
 			"gender": "neutral",
 			"thumbnail": "BitOfABother-Mouth.png",
-			"gemPrice": 88,
-			"heartPrice": 9,
+			"gemBuyPrice": 88,
+			"gemSellPrice": 44,
+			"heartBuyPrice": 9,
+			"heartSellPrice": 4,
 			"layers": [
 			  {
 			  	"filename": "BitOfABother-Mouth.png",
@@ -623,8 +705,10 @@ Meteor.startup(function() {
 			"category": "eyebrows",
 			"gender": "neutral",
 			"thumbnail": "CheerfulGlint-AshBrown-Eyebrows.png",
-			"gemPrice": 88,
-			"heartPrice": 9,
+			"gemBuyPrice": 88,
+			"gemSellPrice": 44,
+			"heartBuyPrice": 9,
+			"heartSellPrice": 4,
 			"layers": [
 			  {
 			  	"filename": "CheerfulGlint-AshBrown-Eyebrows.png",
@@ -637,8 +721,10 @@ Meteor.startup(function() {
 			"category": "headphones",
 			"gender": "neutral",
 			"thumbnail": "BuddingBeat-PeonyPink-Headphones.png",
-			"gemPrice": 88,
-			"heartPrice": 9,
+			"gemBuyPrice": 88,
+			"gemSellPrice": 44,
+			"heartBuyPrice": 9,
+			"heartSellPrice": 4,
 			"layers": [
 			  {
 			  	"filename": "1of2BuddingBeat-PeonyPink-Headphones.png",
@@ -655,8 +741,10 @@ Meteor.startup(function() {
 			"category": "mouth",
 			"gender": "neutral",
 			"thumbnail": "Mischeivous-Mouth.png",
-			"gemPrice": 88,
-			"heartPrice": 9,
+			"gemBuyPrice": 88,
+			"gemSellPrice": 44,
+			"heartBuyPrice": 9,
+			"heartSellPrice": 4,
 			"layers": [
 			  {
 			  	"filename": "Mischeivous-Mouth.png",
@@ -669,8 +757,10 @@ Meteor.startup(function() {
 			"category": "hair",
 			"gender": "neutral",
 			"thumbnail": "SugarlessCandy-Lavender-PigtailsHairstyle.png",
-			"gemPrice": 88,
-			"heartPrice": 9,
+			"gemBuyPrice": 88,
+			"gemSellPrice": 44,
+			"heartBuyPrice": 9,
+			"heartSellPrice": 4,
 			"layers": [
 			  {
 			  	"filename": "1of2SugarlessCandy-Lavender-PigtailsHairstyle.png",
@@ -688,8 +778,10 @@ Meteor.startup(function() {
 			"gender": "neutral",
 			"itemPack": "starter",
 			"thumbnail": "SmilingToMyself-Mouth.png",
-			"gemPrice": 88,
-			"heartPrice": 9,
+			"gemBuyPrice": 88,
+			"gemSellPrice": 0,
+			"heartBuyPrice": 9,
+			"heartSellPrice": 4,
 			"layers": [
 			  {
 			  	"filename": "SmilingToMyself-Mouth.png",
@@ -703,8 +795,10 @@ Meteor.startup(function() {
 			"gender": "neutral",
 			"itemPack": "starter",
 			"thumbnail": "TobiasHeroic-Brown-Hairstyle.png",
-			"gemPrice": 88,
-			"heartPrice": 9,
+			"gemBuyPrice": 88,
+			"gemSellPrice": 0,
+			"heartBuyPrice": 9,
+			"heartSellPrice": 4,
 			"layers": [
 			  {
 			  	"filename": "TobiasHeroic-Brown-Hairstyle.png",
@@ -717,8 +811,10 @@ Meteor.startup(function() {
 			"category": "hair",
 			"gender": "neutral",
 			"thumbnail": "PeppyPreppy-Auburn-PonytailHairstyle.png",
-			"gemPrice": 88,
-			"heartPrice": 9,
+			"gemBuyPrice": 88,
+			"gemSellPrice": 44,
+			"heartBuyPrice": 9,
+			"heartSellPrice": 4,
 			"layers": [
 			  {
 			  	"filename": "PeppyPreppy-Auburn-PonytailHairstyle.png",
@@ -731,8 +827,10 @@ Meteor.startup(function() {
 			"category": "mouth",
 			"gender": "neutral",
 			"thumbnail": "SereneKindess-SpokenGently-Mouth.png",
-			"gemPrice": 88,
-			"heartPrice": 9,
+			"gemBuyPrice": 88,
+			"gemSellPrice": 44,
+			"heartBuyPrice": 9,
+			"heartSellPrice": 4,
 			"layers": [
 			  {
 			  	"filename": "SereneKindess-SpokenGently-Mouth.png",
@@ -745,8 +843,10 @@ Meteor.startup(function() {
 			"category": "eyes",
 			"gender": "neutral",
 			"thumbnail": "SugarlessCandy-LavenderDrop-HeartUGazeEyes.png",
-			"gemPrice": 88,
-			"heartPrice": 9,
+			"gemBuyPrice": 88,
+			"gemSellPrice": 44,
+			"heartBuyPrice": 9,
+			"heartSellPrice": 4,
 			"layers": [
 			  {
 			  	"filename": "SugarlessCandy-LavenderDrop-HeartUGazeEyes.png",
@@ -759,8 +859,10 @@ Meteor.startup(function() {
 			"category": "hair",
 			"gender": "neutral",
 			"thumbnail": "TomasSmooth-HighlightedChestnut-Hairstyle.png",
-			"gemPrice": 88,
-			"heartPrice": 9,
+			"gemBuyPrice": 88,
+			"gemSellPrice": 44,
+			"heartBuyPrice": 9,
+			"heartSellPrice": 4,
 			"layers": [
 			  {
 			  	"filename": "TomasSmooth-HighlightedChestnut-Hairstyle.png",
@@ -773,8 +875,10 @@ Meteor.startup(function() {
 			"category": "eyebrows",
 			"gender": "neutral",
 			"thumbnail": "TrustingEyes-Gray-Eyebrows.png",
-			"gemPrice": 88,
-			"heartPrice": 9,
+			"gemBuyPrice": 88,
+			"gemSellPrice": 44,
+			"heartBuyPrice": 9,
+			"heartSellPrice": 4,
 			"layers": [
 			  {
 			  	"filename": "TrustingEyes-Gray-Eyebrows.png",
@@ -787,8 +891,10 @@ Meteor.startup(function() {
 			"category": "eyes",
 			"gender": "neutral",
 			"thumbnail": "DraconianRule-Crimson-Eyes.png",
-			"gemPrice": 88,
-			"heartPrice": 9,
+			"gemBuyPrice": 88,
+			"gemSellPrice": 44,
+			"heartBuyPrice": 9,
+			"heartSellPrice": 4,
 			"layers": [
 			  {
 			  	"filename": "DraconianRule-Crimson-Eyes.png",
@@ -801,8 +907,10 @@ Meteor.startup(function() {
 			"category": "bgitem",
 			"gender": "neutral",
 			"thumbnail": "WeddingConcerto-Ivory-BabyGrandPiano.png",
-			"gemPrice": 88,
-			"heartPrice": 9,
+			"gemBuyPrice": 88,
+			"gemSellPrice": 44,
+			"heartBuyPrice": 9,
+			"heartSellPrice": 4,
 			"layers": [
 			  {
 			  	"filename": "WeddingConcerto-Ivory-BabyGrandPiano.png",
@@ -816,8 +924,10 @@ Meteor.startup(function() {
 			"gender": "neutral",
 			"itemPack": "starter",
 			"thumbnail": "CheerfulGlint-SkyBlue-Eyes.png",
-			"gemPrice": 88,
-			"heartPrice": 9,
+			"gemBuyPrice": 88,
+			"gemSellPrice": 0,
+			"heartBuyPrice": 9,
+			"heartSellPrice": 4,
 			"layers": [
 			  {
 			  	"filename": "CheerfulGlint-SkyBlue-Eyes.png",
@@ -830,8 +940,10 @@ Meteor.startup(function() {
 			"category": "mouth",
 			"gender": "neutral",
 			"thumbnail": "ShyPeep-Mouth.png",
-			"gemPrice": 88,
-			"heartPrice": 9,
+			"gemBuyPrice": 88,
+			"gemSellPrice": 44,
+			"heartBuyPrice": 9,
+			"heartSellPrice": 4,
 			"layers": [
 			  {
 			  	"filename": "ShyPeep-Mouth.png",
@@ -844,8 +956,10 @@ Meteor.startup(function() {
 			"category": "eyes",
 			"gender": "neutral",
 			"thumbnail": "GrumpySpectre-Indigo-Face.png",
-			"gemPrice": 88,
-			"heartPrice": 9,
+			"gemBuyPrice": 88,
+			"gemSellPrice": 44,
+			"heartBuyPrice": 9,
+			"heartSellPrice": 4,
 			"layers": [
 			  {
 			  	"filename": "GrumpySpectre-Indigo-Face.png",
@@ -858,8 +972,10 @@ Meteor.startup(function() {
 			"category": "eyes",
 			"gender": "neutral",
 			"thumbnail": "MischeivousThought-AgateGreen-Eyes.png",
-			"gemPrice": 88,
-			"heartPrice": 9,
+			"gemBuyPrice": 88,
+			"gemSellPrice": 44,
+			"heartBuyPrice": 9,
+			"heartSellPrice": 4,
 			"layers": [
 			  {
 			  	"filename": "MischeivousThought-AgateGreen-Eyes.png",
@@ -872,8 +988,10 @@ Meteor.startup(function() {
 			"category": "glasses",
 			"gender": "neutral",
 			"thumbnail": "BehindTheBlues-SoftGray-Glasses.png",
-			"gemPrice": 88,
-			"heartPrice": 9,
+			"gemBuyPrice": 88,
+			"gemSellPrice": 44,
+			"heartBuyPrice": 9,
+			"heartSellPrice": 4,
 			"layers": [
 			  {
 			  	"filename": "BehindTheBlues-SoftGray-Glasses.png",
@@ -886,8 +1004,10 @@ Meteor.startup(function() {
 			"category": "hair",
 			"gender": "neutral",
 			"thumbnail": "ElissasTresses-OrangeCaramel-Hairstyle.png",
-			"gemPrice": 88,
-			"heartPrice": 9,
+			"gemBuyPrice": 88,
+			"gemSellPrice": 44,
+			"heartBuyPrice": 9,
+			"heartSellPrice": 4,
 			"layers": [
 			  {
 			  	"filename": "1of2ElissasTresses-OrangeCaramel-Hairstyle.png",
@@ -904,12 +1024,14 @@ Meteor.startup(function() {
 			"category": "pants",
 			"gender": "male",
 			"thumbnail": "RolledCuff-MedBlue-Jeans.png",
-			"gemPrice": 88,
-			"heartPrice": 9,
+			"gemBuyPrice": 88,
+			"gemSellPrice": 44,
+			"heartBuyPrice": 9,
+			"heartSellPrice": 4,
 			"layers": [
 			  {
 			  	"filename": "RolledCuff-MedBlue-Jeans.png",
-			  	"zindex": 100
+			  	"zindex": 80
 			  }	  
 			]
 		},
@@ -919,12 +1041,14 @@ Meteor.startup(function() {
 			"gender": "female",
 			"itemPack": "starter",
 			"thumbnail": "SkyeERCitizen-PinkNWhite-Shoes.png",
-			"gemPrice": 88,
-			"heartPrice": 9,
+			"gemBuyPrice": 88,
+			"gemSellPrice": 0,
+			"heartBuyPrice": 9,
+			"heartSellPrice": 4,
 			"layers": [
 			  {
 			  	"filename": "SkyeERCitizen-PinkNWhite-Shoes.png",
-			  	"zindex": 100
+			  	"zindex": 70
 			  }	  
 			]
 		},
@@ -933,8 +1057,10 @@ Meteor.startup(function() {
 			"category": "glasses",
 			"gender": "neutral",
 			"thumbnail": "BehindTheBlossoms-Red-Glasses.png",
-			"gemPrice": 88,
-			"heartPrice": 9,
+			"gemBuyPrice": 88,
+			"gemSellPrice": 44,
+			"heartBuyPrice": 9,
+			"heartSellPrice": 4,
 			"layers": [
 			  {
 			  	"filename": "BehindTheBlossoms-Red-Glasses.png",
@@ -947,8 +1073,10 @@ Meteor.startup(function() {
 			"category": "shirt",
 			"gender": "male",
 			"thumbnail": "WarmThermal-GrayBlue-LongSlvShirt.png",
-			"gemPrice": 88,
-			"heartPrice": 9,
+			"gemBuyPrice": 88,
+			"gemSellPrice": 44,
+			"heartBuyPrice": 9,
+			"heartSellPrice": 4,
 			"layers": [
 			  {
 			  	"filename": "WarmThermal-GrayBlue-LongSlvShirt.png",
@@ -961,8 +1089,10 @@ Meteor.startup(function() {
 			"category": "makeup",
 			"gender": "neutral",
 			"thumbnail": "GentlyCurious-Blush-Makeup.png",
-			"gemPrice": 88,
-			"heartPrice": 9,
+			"gemBuyPrice": 88,
+			"gemSellPrice": 44,
+			"heartBuyPrice": 9,
+			"heartSellPrice": 4,
 			"layers": [
 			  {
 			  	"filename": "GentlyCurious-Blush-Makeup.png",
@@ -976,8 +1106,10 @@ Meteor.startup(function() {
 			"gender": "female",
 			"itemPack": "starter",
 			"thumbnail": "SkyeERCitizen-PeriwinkleNWhite-Blouse.png",
-			"gemPrice": 88,
-			"heartPrice": 9,
+			"gemBuyPrice": 88,
+			"gemSellPrice": 0,
+			"heartBuyPrice": 9,
+			"heartSellPrice": 4,
 			"layers": [
 			  {
 			  	"filename": "SkyeERCitizen-PeriwinkleNWhite-Blouse.png",
@@ -990,8 +1122,10 @@ Meteor.startup(function() {
 			"category": "mouth",
 			"gender": "neutral",
 			"thumbnail": "GentlyCurious-Mouth.png",
-			"gemPrice": 88,
-			"heartPrice": 9,
+			"gemBuyPrice": 88,
+			"gemSellPrice": 44,
+			"heartBuyPrice": 9,
+			"heartSellPrice": 4,
 			"layers": [
 			  {
 			  	"filename": "GentlyCurious-Mouth.png",
@@ -1005,8 +1139,10 @@ Meteor.startup(function() {
 			"gender": "female",
 			"itemPack": "starter",
 			"thumbnail": "SkyeERCitizen-PeriwinkleNWhite-Skirt.png",
-			"gemPrice": 88,
-			"heartPrice": 9,
+			"gemBuyPrice": 88,
+			"gemSellPrice": 0,
+			"heartBuyPrice": 9,
+			"heartSellPrice": 4,
 			"layers": [
 			  {
 			  	"filename": "SkyeERCitizen-PeriwinkleNWhite-Skirt.png",
@@ -1019,8 +1155,10 @@ Meteor.startup(function() {
 			"category": "eyes",
 			"gender": "neutral",
 			"thumbnail": "GentlyCuriousGaze-LilypadGreen-Eyes.png",
-			"gemPrice": 88,
-			"heartPrice": 9,
+			"gemBuyPrice": 88,
+			"gemSellPrice": 44,
+			"heartBuyPrice": 9,
+			"heartSellPrice": 4,
 			"layers": [
 			  {
 			  	"filename": "GentlyCuriousGaze-LilypadGreen-Eyes.png",
@@ -1033,8 +1171,10 @@ Meteor.startup(function() {
 			"category": "hair",
 			"gender": "neutral",
 			"thumbnail": "ReubenStyledSporty-PaleFawn-Hairstyle.png",
-			"gemPrice": 88,
-			"heartPrice": 9,
+			"gemBuyPrice": 88,
+			"gemSellPrice": 44,
+			"heartBuyPrice": 9,
+			"heartSellPrice": 4,
 			"layers": [
 			  {
 			  	"filename": "ReubenStyledSporty-PaleFawn-Hairstyle.png",
@@ -1047,8 +1187,10 @@ Meteor.startup(function() {
 			"category": "eyebrows",
 			"gender": "neutral",
 			"thumbnail": "GentlyCuriousGaze-AshBrown-Eyebrows.png",
-			"gemPrice": 88,
-			"heartPrice": 9,
+			"gemBuyPrice": 88,
+			"gemSellPrice": 44,
+			"heartBuyPrice": 9,
+			"heartSellPrice": 4,
 			"layers": [
 			  {
 			  	"filename": "GentlyCuriousGaze-AshBrown-Eyebrows.png",
@@ -1061,8 +1203,10 @@ Meteor.startup(function() {
 			"category": "eyebrows",
 			"gender": "neutral",
 			"thumbnail": "SereneKindness-RedBrown-Eyebrows.png",
-			"gemPrice": 88,
-			"heartPrice": 9,
+			"gemBuyPrice": 88,
+			"gemSellPrice": 44,
+			"heartBuyPrice": 9,
+			"heartSellPrice": 4,
 			"layers": [
 			  {
 			  	"filename": "SereneKindness-RedBrown-Eyebrows.png",
@@ -1074,8 +1218,6 @@ Meteor.startup(function() {
     	"gender": "male",
     	"category": "body",
     	"itemPack": "starter",
-    	"gemPrice": 88,
-			"heartPrice": 9,
 			"layers": [
 				{
 					"filename": "MaleA_Arm_Back.png",
@@ -1107,6 +1249,45 @@ Meteor.startup(function() {
 				},
 				{
 					"filename": "MaleA_Torso.png",
+					"zindex": 58
+				}
+	  	]
+	  },
+	  { "name": "Female A Body",
+    	"gender": "female",
+    	"category": "body",
+    	"itemPack": "starter",
+			"layers": [
+				{
+					"filename": "FemaleA_Arm_Back.png",
+					"zindex": 51
+				},
+				{
+					"filename": "FemaleA_Arm_Front.png",
+					"zindex": 52
+				},
+				{
+					"filename": "FemaleA_Feet.png",
+					"zindex": 53
+				},
+				{
+					"filename": "FemaleA_Hand_Back.png",
+					"zindex": 54
+				},
+				{
+					"filename": "FemaleA_Hand_Front.png",
+					"zindex": 55
+				},
+				{
+					"filename": "FemaleA_Head.png",
+					"zindex": 56
+				},
+				{
+					"filename": "FemaleA_Legs.png",
+					"zindex": 57
+				},
+				{
+					"filename": "FemaleA_Torso.png",
 					"zindex": 58
 				}
 	  	]
