@@ -5,6 +5,8 @@
     "bootstrap3-less": {},
     "fast-render": {},
     "createjs": {},
-    "event-hooks": {}
+    "event-hooks": {},
+    "moment": {},
+    "autocomplete": {}
   }
 }

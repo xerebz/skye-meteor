@@ -1,8 +1,11 @@
 <template name="avatarMenu">
   <div id="avatar-menu">
     {{> sortBy}}
-    {{> itemSearch}}
-    {{> colorFind}}
+    <div id="item-search">
+      {{> textSearch}}
+      {{> colorSearch}}
+    </div>
+    {{> ownedItems}}
     {{> equippedItems}}
     {{> newItems}}
   </div>
@@ -10,10 +13,14 @@
 
 <template name="sortBy">
   <div class="dropdown">
-    <button class="btn btn-default dropdown-toggle" type="button" id="sortDropdrown" data-toggle="dropdown">
-      <span class="glyphicon glyphicon-th"></span>
-      Sort items by...
-      <span class="caret"></span>
+    <button class="btn btn-default dropdown-toggle" type="button" id="sortDropdown" data-toggle="dropdown">
+      <span class="text-left">
+	      <span class="glyphicon glyphicon-th left"></span>
+	      Sort items by...
+      </span>
+      <span class="text-right">
+      	<span class="caret"></span>
+      </span>
     </button>
     <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
       <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Favorites First</a></li>
@@ -27,21 +34,42 @@
   </div>
 </template>
 
-<template name="itemSearch">
-  SEARCH
+<template name="textSearch">
+  <div id="searchbar">
+    {{> inputAutocomplete settings=settings id="item-search" class="input-xlarge" placeholder="Find items/tags..."}}
+    <i class="glyphicon glyphicon-tag left"></i>
+    <i class="glyphicon glyphicon-search right"></i>
+  </div>
 </template>
 
-<template name="colorFind">
-  COLORS
+<template name="colorSearch">
+  <div>
+    COLORS
+  </div>
+</template>
+
+<template name="ownedItems">
+  <div id="owned-items" class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">My Owned Items</h3>
+    </div>
+    <div class="panel-body">
+	    {{#each ownedItems}}
+	      {{#if item.thumbnail}}
+	      	<img class="item-thumbnail" src="thumbnails/{{item.thumbnail}}" alt="{{item.name}}" /> 
+	      {{/if}}
+	    {{/each}}
+		</div>
+  </div>
 </template>
 
 <template name="equippedItems">
   <div id="equipped-items" class="panel panel-default">
     <div class="panel-heading">
-      <h3 class="panel-title">Equipped Items</h3>
+      <h3 class="panel-title">My Equipped Items</h3>
     </div>
     <div class="panel-body">
-	    {{#each newItems}}
+	    {{#each equippedItems}}
 	      {{#if item.thumbnail}}
 	      	<img class="item-thumbnail" src="thumbnails/{{item.thumbnail}}" alt="{{item.name}}" /> 
 	      {{/if}}

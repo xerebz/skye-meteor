@@ -1,3 +1,34 @@
-#new-arrivals {
+#avatar-menu {
 	max-width: 300px;
+}
+
+.dropdown, #sortDropdown {
+	width: 100%;
+}
+
+#item-search > div {
+	display: inline-block;
+}
+
+#searchbar { 
+    position: relative; 
+}
+
+#searchbar .glyphicon {
+  position: absolute;
+  padding: 10px;
+  padding-top: 5px;
+  pointer-events: none;
+}
+
+#searchbar .glyphicon.left {
+	left:  0px;
+}
+#searchbar .glyphicon.right {
+	right: 0px;
+}
+
+#searchbar input {
+	padding-left:  30px;
+	padding-right: 30px;
 }

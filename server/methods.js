@@ -31,6 +31,7 @@ Meteor.methods({
       //unlock each item for the user
       InventoryItems.insert({
         'user_id': Meteor.userId(),
+        'acquiredAt': new Date().valueOf(),
         'item': item
       });
 
@@ -60,7 +61,7 @@ Meteor.methods({
 
   },
 
-  handleEquip: function(item) {
+  toggleEquip: function(item) {
 
     var isCurrentlyEquipped = EquippedItems.find( { "user_id": Meteor.userId(), "item.name": item.name } ).count();
 
@@ -89,6 +90,7 @@ Meteor.methods({
 
       InventoryItems.insert({
         'user_id': Meteor.userId(),
+        'acquiredAt': new Date().valueOf(),
         'item': item
       });
 
@@ -97,6 +99,9 @@ Meteor.methods({
   },
 
   sell: function(userItem) {
+
+    //if user has no more of this item, unequip
+
 
     Wallets.update(
       { "user_id": Meteor.userId() },

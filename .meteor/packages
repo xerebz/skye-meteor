@@ -16,3 +16,5 @@ bootstrap3-less
 fast-render
 createjs
 event-hooks
+moment
+autocomplete
