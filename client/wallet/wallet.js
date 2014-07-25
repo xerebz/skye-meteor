@@ -1,5 +1,5 @@
 Template.walletInfo.helpers({
 	wallet: function() {
-	  return Wallets.findOne({"user_id": Meteor.userId()});
+	  return Wallets.findOne({"userId": Meteor.userId()});
 	}
 });

@@ -3,3 +3,7 @@
 	vertical-align: top;
 	max-width: 400px;
 }
+
+#vendor-items, #user-items {
+	text-align: left;
+}

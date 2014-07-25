@@ -1265,6 +1265,7 @@ Meteor.startup(function() {
 	  { "name": "Male A Body",
     	"gender": "male",
     	"category": "body",
+    	"skintone": 'A',
     	"itemPack": "starter",
 			"layers": [
 				{
@@ -1304,6 +1305,7 @@ Meteor.startup(function() {
 	  { "name": "Female A Body",
     	"gender": "female",
     	"category": "body",
+    	"skintone": 'A',
     	"itemPack": "starter",
 			"layers": [
 				{

@@ -47,7 +47,7 @@ var drawItems = function() {
     stage.addChild(new createjs.Bitmap());
   }
 
-  EquippedItems.find({ "user_id" : Meteor.userId() }).forEach( function(equippedItem) {
+  EquippedItems.find({ "userId" : Meteor.userId() }).forEach( function(equippedItem) {
       drawItem(equippedItem);
   });
 

@@ -1,12 +1,12 @@
-<template name="userInventory">
-  <div id="user-inventory" class="panel panel-default">
+<template name="userItems">
+  <div id="user-items" class="panel panel-default">
     <div class="panel-heading">
       <h3 class="panel-title">Inventory</h3>
     </div>
     <div class="panel-body">
-	    {{#each inventoryItems}}
+	    {{#each items}}
 	      {{#if item.thumbnail}}
-	      	<img class="item-thumbnail" src="thumbnails/{{item.thumbnail}}" alt="{{item.name}}" /> 
+	      	<img class="item-thumbnail" src="thumbnails/{{item.thumbnail}}" alt="{{item.name}}" />
 	      {{/if}}
 	    {{/each}}
 		</div>

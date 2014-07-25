@@ -1,6 +1,6 @@
 Template.avatar.helpers({
   userAvatar: function() {
-    return Avatars.find({user_id: Meteor.userId()}).count();
+    return Avatars.find({userId: Meteor.userId()}).count();
   }
 });
 

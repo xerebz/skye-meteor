@@ -5,22 +5,22 @@ Template.avatarMenu.events({
 });
 
 Template.ownedItems.helpers({
-	ownedItems: function() {
-	  return InventoryItems.find({ "user_id" : Meteor.userId() }).fetch();
+	items: function() {
+	  return InventoryItems.find({ "userId" : Meteor.userId() }).fetch();
 	}
 });
 
 Template.equippedItems.helpers({
-	equippedItems: function() {
-	  return EquippedItems.find({ "user_id" : Meteor.userId() }).fetch();
+	items: function() {
+	  return EquippedItems.find({ "userId" : Meteor.userId() }).fetch();
 	}
 });
 
 Template.newItems.helpers({
-	newItems: function() {
+	items: function() {
 		//using moment.js to find the time 1 minute ago
 		var timeWindow =  moment().subtract("minutes", 1).valueOf();
-	  return InventoryItems.find({ "user_id" : Meteor.userId(), "acquiredAt": { $gt: timeWindow } }).fetch();
+	  return InventoryItems.find({ "userId" : Meteor.userId(), "acquiredAt": { $gt: timeWindow } }).fetch();
 	}
 });
 
@@ -34,9 +34,28 @@ Template.textSearch.settings = function() {
        collection: InventoryItems,
        options: '',
        matchAll: true,
-       filter: { user_id: Meteor.userId() },
+       filter: { userId: Meteor.userId() },
        template: Template.dataPiece
      }
    ]
   }
 };
+
+Template.utilityButtons.events({
+	'click #toggle-sex': function() {
+		console.log("changin sex");
+		Meteor.call('toggleSex');
+	},
+	'click #remove-equipment': function() {
+		console.log("remove-all");
+		Meteor.call('removeEquipment');
+	},
+	'click #save-outfit': function() {
+		console.log("save-outfit");
+		Meteor.call('saveOutfit');
+	},
+	'click #publish-avatar': function() {
+		console.log("publish");
+		Meteor.call('publishAvatar');
+	}	
+});

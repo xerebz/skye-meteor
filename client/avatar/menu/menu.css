@@ -2,6 +2,10 @@
 	max-width: 300px;
 }
 
+#owned-items, #equipped-items, #new-items {
+	text-align: left;
+}
+
 #sort-dropdown {
 	margin-bottom: 20px;
 }
@@ -36,4 +40,8 @@
 #searchbar input {
 	padding-left:  30px;
 	padding-right: 30px;
+}
+
+#utility-buttons {
+	margin-bottom: 20px;
 }
