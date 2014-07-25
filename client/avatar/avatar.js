@@ -9,3 +9,11 @@ Template.avatar.events({
 		Meteor.call('handleEquip', this.item);
 	}
 });
+
+// autorun for briefs
+// Deps.autorun(function() {
+// 	if (EquippedItems({"user-id": Meteor.userId(), "item.category": "pants"}).count() === 0) {
+// 		InventoryItems({"user-id": Meteor.userId(), "item.name": "Disappearing Briefs"});
+// 		Meteor.call('handleEquip', this.item);
+// 	}
+// });

@@ -78,7 +78,9 @@ Meteor.methods({
 
   buy: function(item) {
 
-    if (gemBuyPrice < user.gems) {
+    var userWallet = Wallets.findOne({"user_id": Meteor.userId()});
+
+    if (item.gemBuyPrice < userWallet.gems) {
 
       Wallets.update(
         { "user_id": Meteor.userId() },
