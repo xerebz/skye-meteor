@@ -2,22 +2,27 @@
 	max-width: 300px;
 }
 
-.dropdown, #sortDropdown {
+#sort-dropdown {
+	margin-bottom: 20px;
+}
+
+#sort-dropdown, #sort-dropdown-button {
 	width: 100%;
 }
 
 #item-search > div {
 	display: inline-block;
+	margin-bottom: 20px;
 }
 
 #searchbar { 
-    position: relative; 
+    position: relative;
+    margin-right:4px; 
 }
 
 #searchbar .glyphicon {
   position: absolute;
   padding: 10px;
-  padding-top: 5px;
   pointer-events: none;
 }
 
