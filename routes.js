@@ -11,7 +11,8 @@ Router.map (function() {
   this.route('market'),
   this.route('play'),
   this.route('donate'),
-  this.route('login')
+  this.route('login'),
+  this.route('notFound')
 });
 
 //before loading any page, check to see if logged in, otherwise route to login page
@@ -22,13 +23,12 @@ var mustBeSignedIn = function(pause) {
   }
 };
 
-//once logged in, go to the home page
-var goToDashboard = function(pause) {
-  if (Meteor.user()) {
-    Router.go('home');
-    pause();
-  }
-};
-
-Router.onBeforeAction(goToDashboard, {only: ['login']});
 Router.onBeforeAction(mustBeSignedIn, {except: ['login']});
+
+Hooks.onLoggedIn = function() {
+  Router.go('home');
+}
+
+Hooks.onLoggedOut = function() {
+  Router.go('login');
+}

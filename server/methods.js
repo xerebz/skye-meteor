@@ -98,7 +98,7 @@ Meteor.methods({
 
     Wallets.update(
       { "user_id": Meteor.userId() },
-      { $inc: { 'gems': gemSellPrice } }
+      { $inc: { 'gems': userItem.item.gemSellPrice } }
     );
 
     InventoryItems.remove(
