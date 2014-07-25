@@ -21,11 +21,8 @@ var drawItem = function (equippedItem) {
     var img = new Image();
     img.src = "images/"+itemLayer.filename;
     var bitmap = new createjs.Bitmap(img);
-    stage.removeChildAt(itemLayer.zindex);
     stage.addChild(bitmap);
     stage.setChildIndex(bitmap, itemLayer.zindex);
-    console.log(itemLayer.zindex+itemLayer.filename);
-    console.log(stage.getChildIndex(bitmap)+img.src);
     img.onload = function() {
       stage.update();
     };

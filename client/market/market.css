@@ -1,0 +1,5 @@
+#market > div {
+	display: inline-block;
+	vertical-align: top;
+	max-width: 400px;
+}

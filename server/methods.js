@@ -23,7 +23,7 @@ Meteor.methods({
     var default_body = Items.findOne({'name': 'Male A Body'});
 
     //each new players gets a starter pack of items, here we fetch this array
-    var starter_pack = Items.find({'itempack': 'starter'}).fetch();
+    var starter_pack = Items.find({'itemPack': 'starter'}).fetch();
 
     //for each starter pack item...
     _.each(starter_pack, function(item) {
@@ -38,7 +38,7 @@ Meteor.methods({
       if (item.gender !== 'female') {
         EquippedItems.insert({
           'user_id': Meteor.userId(),
-          'item_type': item.type,
+          'category': item.category,
           'item': item
         });
       }
@@ -68,7 +68,7 @@ Meteor.methods({
       EquippedItems.remove({ "user_id": Meteor.userId(), "item.name": item.name });
     } else {
       EquippedItems.update(
-        { "user_id": Meteor.userId(), "item_type": item.type },
+        { "user_id": Meteor.userId(), 'category': item.category, },
         { $set: { "item" : item } },
         { upsert : true }
       );      
@@ -78,18 +78,37 @@ Meteor.methods({
 
   buy: function(item) {
 
-    InventoryItems.insert({
-      "user_id": Meteor.userId(),
-      "item": item
-    });
+    var user = Wallets.findOne({ "user_id": Meteor.userId() });
+
+    var gemPrice = item.gemPrice;
+
+    if (gemPrice < user.gems) {
+
+      Wallets.update(
+        { "user_id": Meteor.userId() },
+        { $inc: { 'gems': -gemPrice } }
+      );
+
+      InventoryItems.insert({
+        'user_id': Meteor.userId(),
+        'item': item
+      });
+
+    }
 
   },
 
-  sell: function(item) {
+  sell: function(userItem) {
+
+    var sellPrice = Math.floor(userItem.item.gemPrice * 0.5);
+
+    Wallets.update(
+      { "user_id": Meteor.userId() },
+      { $inc: { 'gems': sellPrice } }
+    );
 
     InventoryItems.remove(
-      { "user_id": Meteor.userId(), "item": item },
-      { justOne: true }
+      { "_id": userItem._id }
     );
     
   },
