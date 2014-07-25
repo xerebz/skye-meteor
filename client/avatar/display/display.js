@@ -4,6 +4,10 @@ Template.avatarDisplay.helpers({
 
 Template.avatarDisplay.rendered = function() {
 
+  //remove 'select on double click' bug
+  var canvas = document.getElementById('avatar-canvas');
+  canvas.onselectstart = function () { return false; }
+
   //global stage should be file scoped
   stage = new createjs.Stage("avatar-canvas");
 

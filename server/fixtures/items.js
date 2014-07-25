@@ -1214,6 +1214,54 @@ Meteor.startup(function() {
 			  }	  
 			]
 		},
+		{
+			"name": "Disappearing Briefs",
+			"category": "briefs",
+			"gender": "male",
+			"itemPack": "starter",
+			"gemBuyPrice": 0,
+			"gemSellPrice": 0,
+			"heartBuyPrice": 0,
+			"heartSellPrice": 0,
+			"layers": [
+			  {
+			  	"filename": "Disappearing_Briefs.png",
+			  	"zindex": 60
+			  }	  
+			]
+		},
+		{
+			"name": "Disappearing Bra",
+			"category": "briefs",
+			"gender": "female",
+			"itemPack": "starter",
+			"gemBuyPrice": 0,
+			"gemSellPrice": 0,
+			"heartBuyPrice": 0,
+			"heartSellPrice": 0,
+			"layers": [
+			  {
+			  	"filename": "Disappearing_Bra.png",
+			  	"zindex": 60
+			  }	  
+			]
+		},
+		{
+			"name": "Disappearing Panties",
+			"category": "briefs",
+			"gender": "female",
+			"itemPack": "starter",
+			"gemBuyPrice": 0,
+			"gemSellPrice": 0,
+			"heartBuyPrice": 0,
+			"heartSellPrice": 0,
+			"layers": [
+			  {
+			  	"filename": "Disappearing_Panties.png",
+			  	"zindex": 60
+			  }	  
+			]
+		},
 	  { "name": "Male A Body",
     	"gender": "male",
     	"category": "body",
