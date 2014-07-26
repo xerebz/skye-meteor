@@ -8,14 +8,16 @@ Template.avatarDisplay.rendered = function() {
   stage = new createjs.Stage("avatar-canvas");
 
   //rerun the drawing process if equipment changes
+
   Deps.autorun(function () {
-    drawItems(stage);
+    var equippedItems = EquippedItems.find({ "userId" : Meteor.userId() });
+    drawItems(equippedItems.fetch());
   });
 
   // autorun for briefs
   // Deps.autorun(function() {
   //  if (EquippedItems({"user-id": Meteor.userId(), "item.category": "pants"}).count() === 0) {
-  //    InventoryItems({"user-id": Meteor.userId(), "item.name": "Disappearing Briefs"});
+  //    UserItems({"user-id": Meteor.userId(), "item.name": "Disappearing Briefs"});
   //    Meteor.call('handleEquip', this.item);
   //  }
   // });
@@ -30,25 +32,26 @@ var drawItem = function (equippedItem) {
     img.src = "images/"+itemLayer.filename;
     var bitmap = new createjs.Bitmap(img);
     stage.addChild(bitmap);
-    stage.setChildIndex(bitmap, itemLayer.zindex);
+    stage.swapChildrenAt(256, itemLayer.zindex);
+    stage.removeChildAt(256);
     img.onload = function() {
       stage.update();
     };
   }); 
 };
 
-var drawItems = function() {
+var drawItems = function(equippedItems) {
 
   //clear before redraw
   stage.removeAllChildren();
-
+  
   //init 255 layers
-  for (var _i=0; _i < 255; _i++) {
+  for (var _i=0; _i < 256; _i++) {
     stage.addChild(new createjs.Bitmap());
   }
 
-  EquippedItems.find({ "userId" : Meteor.userId() }).forEach( function(equippedItem) {
-      drawItem(equippedItem);
+  _.each(equippedItems, function(equippedItem) {
+    drawItem(equippedItem);
   });
 
 };
