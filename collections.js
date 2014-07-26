@@ -1,18 +1,21 @@
 // Database collections (MongoDB models) are laid out here
 
-// All item items
-Items = new Meteor.Collection("items");
+// All item types
+ItemTypes = new Meteor.Collection("itemTypes");
 
-// All avatars
+// User avatars
 Avatars = new Meteor.Collection("avatars");
 
-// Items currently equipped
+// Avatar bodies
+Bodies = new Meteor.Collection("bodies");
+
+// Items currently equipped by users
 EquippedItems = new Meteor.Collection("equippedItems");
 
 // User item unlocks
-InventoryItems = new Meteor.Collection("inventoryItems");
+UserItems = new Meteor.Collection("userItems");
 
-// Outfits?
+// User avatar outfits, item combinations
 Outfits = new Meteor.Collection("outfits");
 
 // User currency held in wallets

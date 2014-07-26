@@ -1,6 +1,6 @@
 Template.userItems.helpers({
 	items: function() {
-	  return InventoryItems.find({ "userId" : Meteor.userId() }).fetch();
+	  return UserItems.find({ "userId" : Meteor.userId() }).fetch();
 	}
 });
 

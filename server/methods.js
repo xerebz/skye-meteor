@@ -11,7 +11,7 @@ Meteor.methods({
       'userId': Meteor.userId()
     });
 
-    InventoryItems.remove({
+    UserItems.remove({
       'userId': Meteor.userId()
     });
 
@@ -20,16 +20,16 @@ Meteor.methods({
     });
 
     //the default body is Male skin A
-    var default_body = Items.findOne({'name': 'Male A Body'});
+    var default_body = ItemTypes.findOne({'name': 'Male A Body'});
 
     //each new players gets a starter pack of items, here we fetch this array
-    var starter_pack = Items.find({'itemPack': 'starter'}).fetch();
+    var starter_pack = ItemTypes.find({'itemPack': 'starter'}).fetch();
 
     //for each starter pack item...
     _.each(starter_pack, function(item) {
 
       //unlock each item for the user
-      InventoryItems.insert({
+      UserItems.insert({
         'userId': Meteor.userId(),
         'acquiredAt': new Date().valueOf(),
         'item': item
@@ -88,7 +88,7 @@ Meteor.methods({
         { $inc: { 'gems': -item.gemBuyPrice } }
       );
 
-      InventoryItems.insert({
+      UserItems.insert({
         'userId': Meteor.userId(),
         'acquiredAt': new Date().valueOf(),
         'item': item
@@ -108,7 +108,7 @@ Meteor.methods({
       { $inc: { 'gems': userItem.item.gemSellPrice } }
     );
 
-    InventoryItems.remove(
+    UserItems.remove(
       { "_id": userItem._id }
     );
     
@@ -132,25 +132,32 @@ Meteor.methods({
 
   },
 
-  toggleSex: function() {
+  toggleGender: function() {
     
     var currentBody = EquippedItems.findOne({ "userId": Meteor.userId(), "item.category": "body" });
-    console.log("currentBody");
-    console.log(currentBody);
 
     if (currentBody.item.gender === "male") {
-      var equivalentFemale = Items.findOne({ "category": "body", "gender": "female", "skintone": currentBody.item.skintone });
+      var equivalentFemale = ItemTypes.findOne({ "category": "body", "gender": "female", "skintone": currentBody.item.skintone });
       EquippedItems.update(
         { "userId": Meteor.userId(), "item.category": "body" },
         { $set: { "item": equivalentFemale } }
       );
     } else if (currentBody.item.gender === "female") {
-      var equivalentMale = Items.findOne({ "category": "body", "gender": "male", "skintone": currentBody.item.skintone });
+      var equivalentMale = ItemTypes.findOne({ "category": "body", "gender": "male", "skintone": currentBody.item.skintone });
       EquippedItems.update(
         { "userId": Meteor.userId(), "item.category": "body" },
         { $set: { "item": equivalentMale } }
       );
     }
+
+  },
+
+  removeAllEquipped: function() {
+
+    console.log("hih");
+    EquippedItems.remove(
+      { "userId": Meteor.userId() }    );
+    console.log("wtf");
 
   }
 

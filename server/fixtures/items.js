@@ -1344,12 +1344,12 @@ Meteor.startup(function() {
 	  }
 	];
 
-	Items.remove({});
+	ItemTypes.remove({});
   
   //insert fixtures into db
-	if ( Items.find().count() === 0 ) {
+	if ( ItemTypes.find().count() === 0 ) {
 	  _.each(items_fixtures, function(fixture) {
-	  	Items.insert(fixture);
+	  	ItemTypes.insert(fixture);
 	  });
 	}
 

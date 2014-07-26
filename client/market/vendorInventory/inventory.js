@@ -1,6 +1,6 @@
 Template.vendorItems.helpers({
 	items: function() {
-	  return Items.find().fetch();//return Items.find({"vendorItem": true}).fetch();
+	  return ItemTypes.find().fetch();//return Items.find({"vendorItem": true}).fetch();
 	}
 });
 

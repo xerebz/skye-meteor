@@ -6,7 +6,7 @@ Template.avatarMenu.events({
 
 Template.ownedItems.helpers({
 	items: function() {
-	  return InventoryItems.find({ "userId" : Meteor.userId() }).fetch();
+	  return UserItems.find({ "userId" : Meteor.userId() }).fetch();
 	}
 });
 
@@ -20,7 +20,7 @@ Template.newItems.helpers({
 	items: function() {
 		//using moment.js to find the time 1 minute ago
 		var timeWindow =  moment().subtract("minutes", 1).valueOf();
-	  return InventoryItems.find({ "userId" : Meteor.userId(), "acquiredAt": { $gt: timeWindow } }).fetch();
+	  return UserItems.find({ "userId" : Meteor.userId(), "acquiredAt": { $gt: timeWindow } }).fetch();
 	}
 });
 
@@ -31,7 +31,7 @@ Template.textSearch.settings = function() {
    rules: [
      {
        token: '',
-       collection: InventoryItems,
+       collection: UserItems,
        options: '',
        matchAll: true,
        filter: { userId: Meteor.userId() },
@@ -42,13 +42,13 @@ Template.textSearch.settings = function() {
 };
 
 Template.utilityButtons.events({
-	'click #toggle-sex': function() {
+	'click #toggle-gender': function() {
 		console.log("changin sex");
-		Meteor.call('toggleSex');
+		Meteor.call('toggleGender');
 	},
-	'click #remove-equipment': function() {
+	'click #remove-all-equipped': function() {
 		console.log("remove-all");
-		Meteor.call('removeEquipment');
+		Meteor.call('removeAllEquipped');
 	},
 	'click #save-outfit': function() {
 		console.log("save-outfit");
