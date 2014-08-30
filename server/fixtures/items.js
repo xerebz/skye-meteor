@@ -14,7 +14,7 @@ Meteor.startup(function() {
 			"layers": [
 			  {
 			  	"filename": "BehindTheBlossoms-Pink-Hairstyle.png",
-			  	"zindex": 100
+			  	"zindex": 112
 			  }	  
 			]
 		},
@@ -30,7 +30,7 @@ Meteor.startup(function() {
 			"layers": [
 			  {
 			  	"filename": "BehindTheBlossoms-Lavender-Hairstyle.png",
-			  	"zindex": 100
+			  	"zindex": 112
 			  }	  
 			]
 		},
@@ -46,7 +46,7 @@ Meteor.startup(function() {
 			"layers": [
 			  {
 			  	"filename": "WarmThermal-Snow-LongSleevedShirt.png",
-			  	"zindex": 100
+			  	"zindex": 130
 			  }	  
 			]
 		},
@@ -566,7 +566,7 @@ Meteor.startup(function() {
 			"layers": [
 			  {
 			  	"filename": "SereneKindess-Flushed-EyeshdwNBlushMakeup.png",
-			  	"zindex": 100
+			  	"zindex": 98
 			  }	  
 			]
 		},
