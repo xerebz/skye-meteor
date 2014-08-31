@@ -1,7 +1,7 @@
-<template name="avatarMenu">
-  <div id="avatar-menu">
+<template name='avatarMenu'>
+  <div id='avatar-menu'>
     {{> sortBy}}
-    <div id="item-search">
+    <div id='item-search'>
       {{> textSearch}}
       {{> colorSearch}}
     </div>
@@ -12,78 +12,78 @@
   </div>
 </template>
 
-<template name="sortBy">
-  <div id="sort-dropdown" class="dropdown">
-    <button class="btn btn-default dropdown-toggle" type="button" id="sort-dropdown-button" data-toggle="dropdown">
-      <span class="text-left">
-	      <span class="glyphicon glyphicon-th left"></span>
+<template name='sortBy'>
+  <div id='sort-dropdown' class='dropdown'>
+    <button class='btn btn-default dropdown-toggle' type='button' id='sort-dropdown-button' data-toggle='dropdown'>
+      <span class='text-left'>
+	      <span class='glyphicon glyphicon-th left'></span>
 	      Sort items by...
       </span>
-      <span class="text-right">
-      	<span class="caret"></span>
+      <span class='text-right'>
+      	<span class='caret'></span>
       </span>
     </button>
-    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Favorites First</a></li>
-      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Color</a></li>
-      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Type</a></li>
-      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Date</a></li>
-      <li role="presentation" class="divider"></li>
-      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Price Ascending</a></li>
-      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Price Descending</a></li>
+    <ul class='dropdown-menu' role='menu' aria-labelledby='dropdownMenu1'>
+      <li role='presentation'><a role='menuitem' tabindex='-1' href='#'>Favorites First</a></li>
+      <li role='presentation'><a role='menuitem' tabindex='-1' href='#'>Color</a></li>
+      <li role='presentation'><a role='menuitem' tabindex='-1' href='#'>Type</a></li>
+      <li role='presentation'><a role='menuitem' tabindex='-1' href='#'>Date</a></li>
+      <li role='presentation' class='divider'></li>
+      <li role='presentation'><a role='menuitem' tabindex='-1' href='#'>Price Ascending</a></li>
+      <li role='presentation'><a role='menuitem' tabindex='-1' href='#'>Price Descending</a></li>
     </ul>
   </div>
 </template>
 
-<template name="textSearch">
-  <div id="searchbar">
-    {{> inputAutocomplete settings=settings id="item-search" class="form-control" placeholder="Find items/tags..."}}
-    <i class="glyphicon glyphicon-tag left"></i>
-    <i class="glyphicon glyphicon-search right"></i>
+<template name='textSearch'>
+  <div id='searchbar'>
+    {{> inputAutocomplete settings=settings id='item-search' class='form-control' placeholder='Find items/tags...'}}
+    <i class='glyphicon glyphicon-tag left'></i>
+    <i class='glyphicon glyphicon-search right'></i>
   </div>
 </template>
 
-<template name="colorSearch">
+<template name='colorSearch'>
   <div>
     COLORS
   </div>
 </template>
 
-<template name="ownedItems">
-  <div id="content" class="panel panel-default">
-      <ul id="tabs" class="nav nav-tabs panel-heading" data-tabs="tabs">
-          <li><a href="#head-items" data-toggle="tab">H</a></li>
-          <li><a href="#upper-body-items" data-toggle="tab">U</a></li>
-          <li><a href="#lower-body-items" data-toggle="tab">L</a></li>
-          <li><a href="#misc-items" data-toggle="tab">M</a></li>
-          <li><a href="#outfits" data-toggle="tab">O</a></li>
-          <li class="active"><a href="#all-items" data-toggle="tab">A</a></li>
+<template name='ownedItems'>
+  <div id='content' class='panel panel-default'>
+      <ul id='tabs' class='nav nav-tabs panel-heading' data-tabs='tabs'>
+          <li><a href='#head-items' data-toggle='tab'>H</a></li>
+          <li><a href='#upper-body-items' data-toggle='tab'>U</a></li>
+          <li><a href='#lower-body-items' data-toggle='tab'>L</a></li>
+          <li><a href='#misc-items' data-toggle='tab'>M</a></li>
+          <li><a href='#outfits' data-toggle='tab'>O</a></li>
+          <li class='active'><a href='#all-items' data-toggle='tab'>A</a></li>
       </ul>
-      <div id="my-tab-content" class="tab-content panel-body">
-          <div class="tab-pane" id="head-items">
+      <div id='my-tab-content' class='tab-content panel-body'>
+          <div class='tab-pane' id='head-items'>
               <h1>Head Items</h1>
               <p>red red red red red red</p>
           </div>
-          <div class="tab-pane" id="upper-body-items">
+          <div class='tab-pane' id='upper-body-items'>
               <h1>Upper Body</h1>
               <p>orange orange orange orange orange</p>
           </div>
-          <div class="tab-pane" id="lower-body-items">
+          <div class='tab-pane' id='lower-body-items'>
               <h1>Lower Body</h1>
               <p>yellow yellow yellow yellow yellow</p>
           </div>
-          <div class="tab-pane" id="misc-items">
+          <div class='tab-pane' id='misc-items'>
               <h1>Misc Items</h1>
               <p>green green green green green</p>
           </div>
-          <div class="tab-pane" id="outfits">
+          <div class='tab-pane' id='outfits'>
               <h1>Outfits</h1>
               <p>green green green green green</p>
           </div>
-          <div class="tab-pane active" id="all-items">
+          <div class='tab-pane active' id='all-items'>
             {{#each items}}
               {{#if item.thumbnail}}
-                <img class="item-thumbnail" src="thumbnails/{{item.thumbnail}}" alt="{{item.name}}" /> 
+                <img class='item-thumbnail' src='thumbnails/{{item.thumbnail}}' alt='{{item.name}}' /> 
               {{/if}}
             {{/each}}
           </div>
@@ -91,39 +91,39 @@
   </div>
 </template>
 
-<template name="equippedItems">
-  <div id="equipped-items" class="panel panel-default">
-    <div class="panel-heading">
-      <h3 class="panel-title">My Equipped Items</h3>
+<template name='equippedItems'>
+  <div id='equipped-items' class='panel panel-default'>
+    <div class='panel-heading'>
+      <h3 class='panel-title'>My Equipped Items</h3>
     </div>
-    <div class="panel-body">
+    <div class='panel-body'>
 	    {{#each items}}
 	      {{#if item.thumbnail}}
-	      	<img class="item-thumbnail" src="thumbnails/{{item.thumbnail}}" alt="{{item.name}}" />
+	      	<img class='item-thumbnail' src='thumbnails/{{item.thumbnail}}' alt='{{item.name}}' />
 	      {{/if}}
 	    {{/each}}
 		</div>
   </div>
 </template>
 
-<template name="utilityButtons">
-  <div id="utility-buttons">
-	  <a id="toggle-gender" class="btn btn-default" href="#" role="button">M/F</a>
-	  <a id="remove-all-equipped" class="btn btn-default" href="#" role="button">Nek'</a>
-	  <a id="save-outfit" class="btn btn-default" href="#" role="button">Save</a>
-	  <a id="publish-avatar" class="btn btn-default" href="#" role="button">Pub</a>
+<template name='utilityButtons'>
+  <div id='utility-buttons'>
+	  <a id='toggle-gender' class='btn btn-default' href='#' role='button'>M/F</a>
+	  <a id='remove-all-equipped' class='btn btn-default' href='#' role='button'>Nek'</a>
+	  <a id='save-outfit' class='btn btn-default' href='#' role='button'>Save</a>
+	  <a id='publish-avatar' class='btn btn-default' href='#' role='button'>Pub</a>
   </div>
 </template>
 
-<template name="newItems">
-  <div id="new-items" class="panel panel-default">
-    <div class="panel-heading">
-      <h3 class="panel-title">New Arrivals</h3>
+<template name='newItems'>
+  <div id='new-items' class='panel panel-default'>
+    <div class='panel-heading'>
+      <h3 class='panel-title'>New Arrivals</h3>
     </div>
-    <div class="panel-body">
+    <div class='panel-body'>
 	    {{#each items}}
 	      {{#if item.thumbnail}}
-	      	<img class="item-thumbnail" src="thumbnails/{{item.thumbnail}}" alt="{{item.name}}" /> 
+	      	<img class='item-thumbnail' src='thumbnails/{{item.thumbnail}}' alt='{{item.name}}' /> 
 	      {{/if}}
 	    {{/each}}
 		</div>
