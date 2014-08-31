@@ -11,8 +11,6 @@ Template.avatarDisplay.rendered = function() {
 
   Deps.autorun(function () {
     var equippedItems = EquippedItems.find({ 'userId' : Meteor.userId() });
-    console.log(equippedItems);
-    console.log('hey');
     drawItems(equippedItems.fetch());
   });
 
@@ -46,7 +44,7 @@ var defaultLayering = {
   'pet': 200,
   'scarf': 106,
   'blouse': 107,
-  'stockings': 108,
+  'stockings': 98,
   'headphones': 109
 }
 
