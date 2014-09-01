@@ -13,8 +13,7 @@ Meteor.startup(function() {
 			"heartSellPrice": 4,
 			"layers": [
 			  {
-			  	"filename": "BehindTheBlossoms-Pink-Hairstyle.png",
-			  	"zindex": 112
+			  	"filename": "BehindTheBlossoms-Pink-Hairstyle.png"
 			  }	  
 			]
 		},
@@ -29,8 +28,7 @@ Meteor.startup(function() {
 			"heartSellPrice": 4,
 			"layers": [
 			  {
-			  	"filename": "BehindTheBlossoms-Lavender-Hairstyle.png",
-			  	"zindex": 112
+			  	"filename": "BehindTheBlossoms-Lavender-Hairstyle.png"
 			  }	  
 			]
 		},
@@ -45,8 +43,7 @@ Meteor.startup(function() {
 			"heartSellPrice": 4,
 			"layers": [
 			  {
-			  	"filename": "WarmThermal-Snow-LongSleevedShirt.png",
-			  	"zindex": 130
+			  	"filename": "WarmThermal-Snow-LongSleevedShirt.png"
 			  }	  
 			]
 		},
@@ -61,8 +58,7 @@ Meteor.startup(function() {
 			"heartSellPrice": 4,
 			"layers": [
 			  {
-			  	"filename": "FleepTheCloudsheep-HoveringPose.png",
-			  	"zindex": 200
+			  	"filename": "FleepTheCloudsheep-HoveringPose.png"
 			  }	  
 			]
 		},
@@ -77,8 +73,7 @@ Meteor.startup(function() {
 			"heartSellPrice": 4,
 			"layers": [
 			  {
-			  	"filename": "ChipperUpbeatNatural-ForestGreen-Eyes.png",
-			  	"zindex": 100
+			  	"filename": "ChipperUpbeatNatural-ForestGreen-Eyes.png"
 			  }	  
 			]
 		},
@@ -93,8 +88,7 @@ Meteor.startup(function() {
 			"heartSellPrice": 4,
 			"layers": [
 			  {
-			  	"filename": "BehindTheBlossoms-Blush-Makeup.png",
-			  	"zindex": 100
+			  	"filename": "BehindTheBlossoms-Blush-Makeup.png"
 			  }	  
 			]
 		},
@@ -109,8 +103,7 @@ Meteor.startup(function() {
 			"heartSellPrice": 4,
 			"layers": [
 			  {
-			  	"filename": "SkyeERCitizenUniform-Navy-Jacket.png",
-			  	"zindex": 110
+			  	"filename": "SkyeERCitizenUniform-Navy-Jacket.png"
 			  }	  
 			]
 		},
@@ -126,8 +119,7 @@ Meteor.startup(function() {
 			"heartSellPrice": 0,
 			"layers": [
 			  {
-			  	"filename": "SkyeERCitizenUniform-Navy-Slacks.png",
-			  	"zindex": 80
+			  	"filename": "SkyeERCitizenUniform-Navy-Slacks.png"
 			  }	  
 			]
 		},
@@ -142,8 +134,7 @@ Meteor.startup(function() {
 			"heartSellPrice": 4,
 			"layers": [
 			  {
-			  	"filename": "BehindTheBlossoms-Chestnut-Eyebrows.png",
-			  	"zindex": 100
+			  	"filename": "BehindTheBlossoms-Chestnut-Eyebrows.png"
 			  }	  
 			]
 		},
@@ -158,8 +149,7 @@ Meteor.startup(function() {
 			"heartSellPrice": 4,
 			"layers": [
 			  {
-			  	"filename": "Piqued-Mouth.png",
-			  	"zindex": 100
+			  	"filename": "Piqued-Mouth.png"
 			  }	  
 			]
 		},
@@ -174,8 +164,7 @@ Meteor.startup(function() {
 			"heartSellPrice": 4,
 			"layers": [
 			  {
-			  	"filename": "1of2SkyeERCitizen-Navy-TracksuitJacket.png",
-			  	"zindex": 130
+			  	"filename": "1of2SkyeERCitizen-Navy-TracksuitJacket.png"
 			  },
 			  {
 			  	"filename": "2of2SkyeERCitizen-Navy-TracksuitJacket.png",
@@ -194,8 +183,7 @@ Meteor.startup(function() {
 			"heartSellPrice": 4,
 			"layers": [
 			  {
-			  	"filename": "SpeakingContentedly-Mouth.png",
-			  	"zindex": 100
+			  	"filename": "SpeakingContentedly-Mouth.png"
 			  }	  
 			]
 		},
@@ -210,8 +198,7 @@ Meteor.startup(function() {
 			"heartSellPrice": 4,
 			"layers": [
 			  {
-			  	"filename": "1of2CheckeredPuff-Purple-Scarf.png",
-			  	"zindex": 100
+			  	"filename": "1of2CheckeredPuff-Purple-Scarf.png"
 			  },
 			  {
 			  	"filename": "2of2CheckeredPuff-Purple-Scarf.png",
@@ -230,8 +217,7 @@ Meteor.startup(function() {
 			"heartSellPrice": 4,
 			"layers": [
 			  {
-			  	"filename": "CheekyGrin-Mouth.png",
-			  	"zindex": 100
+			  	"filename": "CheekyGrin-Mouth.png"
 			  }	  
 			]
 		},
@@ -246,8 +232,7 @@ Meteor.startup(function() {
 			"heartSellPrice": 4,
 			"layers": [
 			  {
-			  	"filename": "CalmingGaze-SiennaBrown-Eyebrows.png",
-			  	"zindex": 100
+			  	"filename": "CalmingGaze-SiennaBrown-Eyebrows.png"
 			  }	  
 			]
 		},
@@ -263,8 +248,7 @@ Meteor.startup(function() {
 			"heartSellPrice": 0,
 			"layers": [
 			  {
-			  	"filename": "SkyeERCitizen-PinkNWhite-Skirt.png",
-			  	"zindex": 100
+			  	"filename": "SkyeERCitizen-PinkNWhite-Skirt.png"
 			  }	  
 			]
 		},
@@ -280,8 +264,7 @@ Meteor.startup(function() {
 			"heartSellPrice": 4,
 			"layers": [
 			  {
-			  	"filename": "SkyeERCitizen-PinkNWhite-Blouse.png",
-			  	"zindex": 100
+			  	"filename": "SkyeERCitizen-PinkNWhite-Blouse.png"
 			  }	  
 			]
 		},
@@ -296,8 +279,7 @@ Meteor.startup(function() {
 			"heartSellPrice": 4,
 			"layers": [
 			  {
-			  	"filename": "1of2CheckeredPuff-Red-Scarf.png",
-			  	"zindex": 100
+			  	"filename": "1of2CheckeredPuff-Red-Scarf.png"
 			  },
 			  {
 			  	"filename": "2of2CheckeredPuff-Red-Scarf.png",
@@ -317,8 +299,7 @@ Meteor.startup(function() {
 			"heartSellPrice": 4,
 			"layers": [
 			  {
-			  	"filename": "SkyeERCitizenUniform-Navy-Loafers.png",
-			  	"zindex": 70
+			  	"filename": "SkyeERCitizenUniform-Navy-Loafers.png"
 			  }	  
 			]
 		},
@@ -333,8 +314,7 @@ Meteor.startup(function() {
 			"heartSellPrice": 4,
 			"layers": [
 			  {
-			  	"filename": "DraconianRule-Crimson-Eyebrows.png",
-			  	"zindex": 100
+			  	"filename": "DraconianRule-Crimson-Eyebrows.png"
 			  }	  
 			]
 		},
@@ -350,8 +330,7 @@ Meteor.startup(function() {
 			"heartSellPrice": 4,
 			"layers": [
 			  {
-			  	"filename": "SkyeERCitizen-PinkNWhite-Stockings.png",
-			  	"zindex": 100
+			  	"filename": "SkyeERCitizen-PinkNWhite-Stockings.png"
 			  }	  
 			]
 		},
