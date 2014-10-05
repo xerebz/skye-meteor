@@ -20,3 +20,8 @@ Outfits = new Meteor.Collection("outfits");
 
 // User currency held in wallets
 Wallets = new Meteor.Collection("wallets");
+
+// PNG submitter images (for upload)
+var Images = new FS.Collection("images", {
+  stores: [new FS.Store.FileSystem("images", {path: "~/uploads"})]
+});

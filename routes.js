@@ -12,7 +12,8 @@ Router.map (function() {
   this.route('play'),
   this.route('donate'),
   this.route('login'),
-  this.route('notFound')
+  this.route('notFound'),
+  this.route('upload')
 });
 
 //before loading any page, check to see if logged in, otherwise route to login page
